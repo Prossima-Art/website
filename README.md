@@ -8,7 +8,9 @@ We decided to open our website source code for the Community. 💪
 
 With this we pretend to:
 1. Accept new ideas to anyone willing to participate
-2. Get to know by the Community
+2. Be known by the Community
+
+Thanks for your suport❗
 
 Aaw-yeah❗
 
