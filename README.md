@@ -10,6 +10,7 @@ With this we pretend to:
 1. Accept new ideas to anyone willing to participate
 2. Get to know by the Community
 
-Aaw-yeah❗ 
+Aaw-yeah❗
+
 <img src="https://raw.githubusercontent.com/Lane-Art-Design/website/main/img/aaw-yeah.gif"/>
 
