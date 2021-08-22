@@ -1,0 +1,28 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
+
+.carousel {
+  margin-top: 200px;
+
+}
+
+.carousel-item {
+  text-align: center;
+  min-height: 280px;
+
+  /* Prevent carousel from being distorted if for some reason image doesn't load */
+
+  img {
+    width: 35%;
+    margin-right: 680px;
+    text-align: center;
+    min-height: 280px;
+
+    /* Prevent carousel from being distorted if for some reason image doesn't load */
+  }
+}
+
+hr {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}

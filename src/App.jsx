@@ -1,19 +1,18 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import './sass/style.scss';
+import carousel from "./componets/carousel";
 import assent1 from "./img/Asset 21.svg";
 import assent2 from "./img/Asset 31.svg";
 import assent3 from "./img/Asset 41.svg";
 import assent4 from "./img/Asset 71.svg";
 import logo from "./img/logo/logo.png";
+import Carousel from './componets/carousel';
 
 function App() {
   return (
+    
     <div className="App">
-    
-    {/*
-    
-  */}
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,6 +43,7 @@ function App() {
         </div>
       </div>
       <div id="lottie" />
+      
     </section>
     <section id="pageB">
       <div className="waterfall">
@@ -58,17 +58,9 @@ function App() {
         <div className="waterfall_drops _9" />
         <div className="waterfall_drops _10" />
       </div>
-      <div className="container">
-        <div className="UX">
-          {" "}
-          UX/ UI <br /> Design
-        </div>
-        <p>
-          UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
-        </p>
-        <button className="btn"> Ver Mais</button>
-        <button className="btn-or"> Orçamento</button>
-      </div>
+      <carousel/>
+      ) 
+      <Carousel/>
     </section>
     <section id="pageC">
       <div className="grid-container">
