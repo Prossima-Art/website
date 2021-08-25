@@ -69,15 +69,19 @@ function App() {
         <img src={assent3} alt />
         <img src={assent4} alt />
       </div>
+
       <div className="megafooter">
-        SOBRE <br />
-        Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu
-        sucesso! <br />
-        Oferecemos soluções inovadoras para que pessoas tenham a <br />{" "}
-        oportunidade de se desenvolver de forma contínua e arrojada. <br /> Além
-        de valorizar o cliente através de um atendimento especial e diferenciado.
+        <p>
+          SOBRE <br />
+          Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu
+          sucesso! <br />
+          Oferecemos soluções inovadoras para que pessoas tenham a <br />
+          oportunidade de se desenvolver de forma contínua e arrojada. <br /> Além
+          de valorizar o cliente através de um atendimento especial e diferenciado.
+        </p>
       </div>
       <div id="footer">
+      
         <div>
           <a href="#">Suport</a>
         </div>
@@ -86,7 +90,7 @@ function App() {
             src={logo}
             alt="logo"
             width="120px"
-            style={{ marginTop: "-20px" }}
+            style={{ marginTop: "-15px" }}
           />
         </div>
         <div>

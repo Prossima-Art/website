@@ -186,7 +186,6 @@ a {
   p {
     font: normal normal normal 30px/37px Montserrat;
     letter-spacing: 0px;
-    line-height: 1.2;
     width: 330px;
     font-size: 18px;
     text-align: left;
@@ -255,13 +254,13 @@ a {
 .megafooter {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 700px;
   text-align: center;
   font: $font-14;
-  letter-spacing: 0px;
+  line-height: 1.5;
   color: #ffffff;
   padding: 5px;
   max-width: 100%;
+  
 }
 
 /* footer :) */

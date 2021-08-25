@@ -1,6 +1,17 @@
 
 /* mobile */
+@media screen and (min-width: 1280px) {
 
+    #footer{
+      line-height: 1.5;
+      margin-top: 20px; 
+    }
+
+    .megafooter{
+      max-width: 100%;
+      margin-top: 680px;
+    }
+  }
 @media screen and (max-width: 980px) {
     .container {
       width: 100%;
@@ -13,14 +24,19 @@
     .waterfall {
       width: 100%;
       margin-left: -400px;
-    }
+    } 
+    
   }
 
   @media screen and (max-width: 780px) {
     .container {
       width: 100%;
-
       margin-left: 200px;
+    }
+
+    .waterfall {
+      width: 100%;
+      margin-left: -450px;
     }
   }
 
@@ -32,7 +48,10 @@
     .waterfall {
       width: 100%;
       margin-left: -500px;
+    }
   }
+  
+
 
   @media screen and (max-width: 580px) {
     .container {
@@ -53,8 +72,14 @@
   }
 
   @media only screen and (max-width: 601px) {
-    #footer {
-        margin-top: -320px;
+
+   
+    #footer{
+      
+      margin-top: 560px; 
+    }
+    .megafooter{
+      position: absolute;
+      margin-top: 380px;
     }
   }
-}
