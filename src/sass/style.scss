@@ -1,0 +1,335 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+
+@import "./variables.scss";
+@import "./syle_mobile.scss";
+@import "./head.scss";
+
+
+body {
+  background: $bg_full;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px #a0b1cf;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary_color;
+  border-radius: 10px;
+
+  &:hover {
+    background: #6a82ad;
+  }
+}
+
+p {
+  font: $font-14;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+section {
+  width: 100%;
+  height: 1000px;
+  float: left;
+}
+
+a {
+  color: #FFFFFF; 
+}
+
+#lottie {
+  width: 50%;
+  margin-left: 300px;
+  display: block;
+  background-color: transparent;
+}
+
+#pageA, #pageB, #pageC {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.waterfall {
+  width: 50rem;
+  height: 1900px;
+  align-items: center;
+  position: absolute;
+  top: 980px;
+  left: 700px;
+
+  .waterfall_drops {
+    position: absolute;
+    border-radius: 20px;
+    background: rgba(173, 184, 218, 0.7);
+    animation: waterfall 2s linear infinite;
+
+    &._1 {
+      width: 3px;
+      height: 40px;
+      left: 40px;
+      top: 20px;
+      animation-delay: 1s;
+      animation-duration: 5s;
+    }
+
+    &._2 {
+      width: 3px;
+      height: 60px;
+      left: 140px;
+      top: 10px;
+      animation-delay: 1s;
+      animation-duration: 3s;
+    }
+
+    &._3 {
+      width: 4px;
+      height: 70px;
+      left: 105px;
+      top: 40px;
+      animation-delay: 3s;
+      animation-duration: 4s;
+    }
+
+    &._4 {
+      width: 3px;
+      height: 20px;
+      left: 40px;
+      top: 120px;
+      animation-delay: 3s;
+      animation-duration: 3s;
+    }
+
+    &._5 {
+      width: 4px;
+      height: 50px;
+      left: 10px;
+      top: 20px;
+      animation-delay: 1s;
+      animation-duration: 4s;
+    }
+
+    &._6 {
+      width: 4px;
+      height: 30px;
+      left: 130px;
+      top: 100px;
+      animation-delay: 5s;
+    }
+
+    &._7 {
+      width: 4.5px;
+      height: 35px;
+      left: 60px;
+      top: 100px;
+      animation-duration: 1s;
+    }
+
+    &._8 {
+      width: 4px;
+      height: 4px;
+      left: 67px;
+      top: 300px;
+      animation-delay: 3s;
+    }
+
+    &._9 {
+      width: 2.7px;
+      height: 25px;
+      left: 65px;
+      top: 230px;
+      animation-delay: 1s;
+    }
+
+    &._10 {
+      width: 3px;
+      height: 42px;
+      left: 60px;
+      top: 330px;
+      animation-delay: 8s;
+    }
+  }
+}
+
+@keyframes waterfall {
+  100% {
+    top: 80%;
+  }
+}
+.carousel .container{ /*bootstrap with local container*/
+  position: absolute;
+  margin-left: 900px;
+  margin-top: -500px;
+ }
+.container {
+  margin-left: 10px;
+  margin-top: 20px;
+
+  p {
+    font: normal normal normal 30px/37px Montserrat;
+    margin-left: 200px;
+    letter-spacing: 0px;
+    width: 330px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .UX {
+    // max-width: 200px;
+    width: 116px;
+    height: 220px;
+    margin-left: 200px;
+    text-align: right;
+    font: $UX;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+
+  .btn {
+    background: #90A6FC 0% 0% no-repeat padding-box;
+    font: normal normal normal 18px/20px Montserrat;
+    padding: 8px 20px 10px 20px;
+    color: #ffffff;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 31px;
+    width: 210px;
+    height: 55px;
+    opacity: 1;
+    transition-duration: 0.4s;
+    margin-left: -400px;
+
+    &:hover {
+      opacity: 0.2;
+      color: #FFFFFF;
+    }
+  }
+
+  .btn-or {
+    text-align: left;
+    text-decoration: underline;
+    background-color: transparent;
+    font: normal normal normal 16px/32px Montserrat;
+    border: transparent;
+    cursor: pointer;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    margin-left: 30px;
+    opacity: 1;
+  }
+}
+
+.grid-container { /* Descrição de produtos em grid*/
+  margin-left:30px; 
+  display: flex;
+  align-items:flex-end;
+  justify-content:center;
+  grid-auto-flow: dense;
+  grid-gap: 3rem;
+  
+  img {
+    width: 35%;
+    margin-left: 80px;
+    object-fit: cover;
+  }
+  
+  .p-description-1 {
+    left: 0%;
+    right: 78.17%;
+    top: 68.57%;
+    bottom: 0%;
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .p-description {
+    left: 0%;
+    margin-left: 60px;
+    top: 43.01%;
+    bottom: 47.13%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 30px;
+    max-width: 250px;
+    line-height: 1.5;
+  }
+  .sadtruck{
+    width: 20%;
+  }
+}
+
+/* end grid */
+
+.megafooter {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  font: $font-14;
+  color: #ffffff;
+  padding: 5px;
+  max-width: 100%;
+
+  .foot_p {
+      font: $font-14;
+      font-style: normal;
+      font-weight: bold;  
+
+    }
+    .p-chill {
+      left: 0%;
+      right: 78.17%;
+      top: 68.57%;
+      bottom: 0%;
+      font-family: Montserrat;
+      color: #FFFFFF;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+}
+
+/* footer :) */
+
+#footer {
+  font: normal normal normal 12px/32px Montserrat;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  > div {
+    margin-top: 30px;
+    width: 100px;
+    height: 20px;
+  }
+
+   a{
+    color:#FFFFFF;
+  }
+}
