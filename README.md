@@ -1,5 +1,6 @@
+<p align="center">
 <img src="https://raw.githubusercontent.com/Lane-Art-Design/website/main/src/img/logo/logo.png"/>
-
+</p>
 Hi folks❗
 
 This is Lane Art Design. 🏝️ 
