@@ -1,15 +1,24 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import './sass/style.scss';
-import carousel from "./componets/carousel";
 import assent1 from "./img/Asset 21.svg";
 import assent2 from "./img/Asset 31.svg";
 import assent3 from "./img/Asset 41.svg";
 import assent4 from "./img/Asset 71.svg";
 import logo from "./img/logo/logo.png";
 import Carousel from './componets/carousel';
+import Lottie from 'react-lottie';
+import animationData from './data.json';
+
 
 function App() {
+  const defaultOptions = {
+    loop: false,
+    autoplay: true, 
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
     
     <div className="App">
@@ -42,8 +51,9 @@ function App() {
           <a href="#">CONTATO</a>
         </div>
       </div>
-      <div id="lottie" />
-      
+      <Lottie options={defaultOptions}
+              height={400}
+              width={400}></Lottie>
     </section>
     <section id="pageB">
       <div className="waterfall">
@@ -64,10 +74,26 @@ function App() {
     </section>
     <section id="pageC">
       <div className="grid-container">
-        <img src={assent1} alt="Prazo de entrega" />
-        <img src={assent2} alt />
-        <img src={assent3} alt />
-        <img src={assent4} alt />
+        <div>
+          <img src={assent1} alt="Prazo de entrega" className="sadtruck"/>
+          <p className="p-description">Prazo de entrega</p>
+          <p className="p-description-1">Os melhores prazos para você que não quer esperar tanto pelo seu produto</p>
+        </div>
+        <div>
+          <img src={assent2} alt="Prazo de entrega" />
+          <p className="p-description">Melhores descontos</p>
+          <p className="p-description-1">20% OFF, nas compras acima de 500 reais.</p>
+        </div>
+        <div>
+          <img src={assent3} alt="Prazo de entrega" />
+          <p className="p-description">12x sem juros</p>
+          <p className="p-description-1">Parcele suas compras em todos os cartões.</p>
+        </div>
+        <div>
+          <img src={assent4} alt="Prazo de entrega" />
+          <p className="p-description">Quer mais descontos?</p>
+          <p className="p-description-1">Obtenha melhores descontos com pagamentos em criptomoedas.</p>
+        </div>
       </div>
 
       <div className="megafooter">

@@ -11,7 +11,7 @@ class Carousel extends React.Component {
             <div className="container-fluid">
   <div id="myCarousel" className="carousel slide" data-ride="carousel">
     {/* Carousel indicators */}
-    <ol className="carousel-indicators" >
+    <ol className="carousel-indicators my-4" >
       <li data-target="#myCarousel" data-slide-to={0} className="active" />
       <li data-target="#myCarousel" data-slide-to={1} />
       <li data-target="#myCarousel" data-slide-to={2} />
@@ -22,7 +22,7 @@ class Carousel extends React.Component {
         <img src={image_slider1} alt="First Slide" />
      
         <div className="container">
-          <div className="UX"> UX/ UI Design</div>
+          <div className="UX"> UX/UI Design</div>
           <p>
             UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
           </p>

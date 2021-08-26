@@ -4,7 +4,9 @@
   margin-top: 200px;
 
 }
-
+.carousel-indicators{
+  bottom: -50px;
+}
 .carousel-item {
   text-align: center;
   min-height: 280px;
@@ -12,7 +14,8 @@
   /* Prevent carousel from being distorted if for some reason image doesn't load */
 
   img {
-    width: 35%;
+    width: 30%;
+    position: inherit;
     margin-right: 680px;
     text-align: center;
     min-height: 280px;
@@ -21,8 +24,8 @@
   }
 }
 
-hr {
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
+// hr {
+//   overflow: hidden;
+//   position: relative;
+//   text-align: center;
+// }

@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
 
 @import "./variables.scss";
 @import "./syle_mobile.scss";
@@ -176,7 +178,7 @@ a {
 }
 .carousel .container{ /*bootstrap with local container*/
   position: absolute;
-  margin-left: 760px;
+  margin-left: 900px;
   margin-top: -500px;
  }
 .container {
@@ -185,6 +187,7 @@ a {
 
   p {
     font: normal normal normal 30px/37px Montserrat;
+    margin-left: 200px;
     letter-spacing: 0px;
     width: 330px;
     font-size: 18px;
@@ -192,12 +195,13 @@ a {
   }
 
   .UX {
-    
-    width: 316px;
+    // max-width: 200px;
+    width: 116px;
     height: 220px;
+    margin-left: 200px;
     text-align: right;
     font: $UX;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     color: #FFFFFF;
     opacity: 1;
   }
@@ -214,6 +218,7 @@ a {
     height: 55px;
     opacity: 1;
     transition-duration: 0.4s;
+    margin-left: -400px;
 
     &:hover {
       opacity: 0.2;
@@ -235,17 +240,45 @@ a {
   }
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+.grid-container { /* Descrição de produtos em grid*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
-  margin-left: 170px;
-
-  > img {
+  grid-gap: 4rem;
+  
+  img {
+    width: 35%;
+    margin-left: 80px;
     object-fit: cover;
-    object-position: 50% 50%;
-    width: 30%;
+  }
+  
+  .p-description-1 {
+    left: 0%;
+    right: 78.17%;
+    top: 68.57%;
+    bottom: 0%;
+    font-family: Montserrat;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
+  }
+  .p-description {
+    left: 0%;
+    margin-left: 60px;
+    top: 43.01%;
+    bottom: 47.13%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 30px;
+    max-width: 300px;
+    line-height: 44px;
+  }
+  .sadtruck{
+    width: 25%;
   }
 }
 
