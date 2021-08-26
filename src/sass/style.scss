@@ -54,7 +54,7 @@ section {
 }
 
 a {
-  color: #FFFFFF;
+  color: #FFFFFF; 
 }
 
 #lottie {
@@ -241,11 +241,12 @@ a {
 }
 
 .grid-container { /* Descrição de produtos em grid*/
+  margin-left:30px; 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:flex-end;
+  justify-content:center;
   grid-auto-flow: dense;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
   
   img {
     width: 35%;
@@ -262,7 +263,7 @@ a {
     color: #FFFFFF;
     font-weight: 300;
     font-size: 16px;
-    line-height: 29px;
+    line-height: 1.5;
   }
   .p-description {
     left: 0%;
@@ -274,11 +275,11 @@ a {
     font-weight: bold;
     color: #FFFFFF;
     font-size: 30px;
-    max-width: 300px;
-    line-height: 44px;
+    max-width: 250px;
+    line-height: 1.5;
   }
   .sadtruck{
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -289,11 +290,27 @@ a {
   margin-right: 0;
   text-align: center;
   font: $font-14;
-  line-height: 1.5;
   color: #ffffff;
   padding: 5px;
   max-width: 100%;
-  
+
+  .foot_p {
+      font: $font-14;
+      font-style: normal;
+      font-weight: bold;  
+
+    }
+    .p-chill {
+      left: 0%;
+      right: 78.17%;
+      top: 68.57%;
+      bottom: 0%;
+      font-family: Montserrat;
+      color: #FFFFFF;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 }
 
 /* footer :) */
@@ -307,8 +324,12 @@ a {
   justify-content: space-between;
 
   > div {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100px;
     height: 20px;
+  }
+
+   a{
+    color:#FFFFFF;
   }
 }

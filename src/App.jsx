@@ -86,7 +86,7 @@ function App() {
         </div>
         <div>
           <img src={assent3} alt="Prazo de entrega" />
-          <p className="p-description">12x sem juros</p>
+          <p className="p-description">12x sem <br/> juros</p>
           <p className="p-description-1">Parcele suas compras em todos os cartões.</p>
         </div>
         <div>
@@ -97,13 +97,15 @@ function App() {
       </div>
 
       <div className="megafooter">
-        <p>
+        <p className="foot_p">
           SOBRE <br />
-          Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu
-          sucesso! <br />
-          Oferecemos soluções inovadoras para que pessoas tenham a <br />
-          oportunidade de se desenvolver de forma contínua e arrojada. <br /> Além
-          de valorizar o cliente através de um atendimento especial e diferenciado.
+          <p className="p-chill">
+            Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu
+            sucesso! <br />
+            Oferecemos soluções inovadoras para que pessoas tenham a <br />
+            oportunidade de se desenvolver de forma contínua e arrojada. <br /> Além
+            de valorizar o cliente através de um atendimento especial e diferenciado.
+          </p> 
         </p>
       </div>
       <div id="footer">

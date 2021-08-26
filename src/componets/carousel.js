@@ -4,6 +4,8 @@ import '../sass/carousel.scss'
 import image_slider0 from '../img/image_slider0'
 import image_slider1 from '../img/image_slider1'
 import image_slider2 from '../img/image_slider2'
+
+
 class Carousel extends React.Component {
       render(){
           return(
