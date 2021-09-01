@@ -1,24 +1,49 @@
 import React from 'react';
+// import reactDom from 'react-dom';
 import './sass/style.scss';
-import assent1 from "./img/Asset 21.svg";
-import assent2 from "./img/Asset 31.svg";
-import assent3 from "./img/Asset 41.svg";
-import assent4 from "./img/Asset 71.svg";
 import logo from "./img/logo/logo.png";
 import Carousel from './componets/carousel';
 import Lottie from 'react-lottie';
-import animationData from './data.json';
-
+import pig from './img/pig.json';
+import btc from './img/BTC.json';
+import cart from './img/cart.json';
+import card from './img/creditcard.json';
 
 function App() {
-  const defaultOptions = {
-    loop: false,
+  const animaton_pig = {
+    loop: true,
     autoplay: true, 
-    animationData: animationData,
+    animationData: pig,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+
+  const animaton_btc_eth = {
+    loop: true,
+    autoplay: true, 
+    animationData: btc,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const animaton_cart = {
+    loop: true,
+    autoplay: true, 
+    animationData: cart,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  const animaton_card = {
+    loop: true,
+    autoplay: true, 
+    animationData: card,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+  
   return (
     
     <div className="App">
@@ -41,7 +66,7 @@ function App() {
               <br /> Entorno!
             </em>
           </a>
-          <a href="#">
+          <a href="#pageC">
             PERSONALISE{" "}
             <em className="subtopnav">
               {" "}
@@ -51,11 +76,20 @@ function App() {
           <a href="#">CONTATO</a>
         </div>
       </div>
-      <Lottie options={defaultOptions}
-              height={400}
-              width={400}></Lottie>
+        <div className="Container_orcamento">
+          <p className="paragraph_1">
+          Design Gráfico <br/>      
+          Para qualquer tipo de necessidade
+          </p>
+          <button className="btn_m1"> Orçamento </button>
+      </div>
+        {/* <Lottie options={defaultOptions}
+                height={400}
+                width={400}></Lottie> */}
+        
     </section>
     <section id="pageB">
+      
       <div className="waterfall">
         <div className="waterfall_drops _1" />
         <div className="waterfall_drops _2" />
@@ -66,45 +100,76 @@ function App() {
         <div className="waterfall_drops _7" />
         <div className="waterfall_drops _8" />
         <div className="waterfall_drops _9" />
-        <div className="waterfall_drops _10" />
+        <div className="waterfall_drops _10"/>
       </div>
-      <carousel/>
-      ) 
+      
       <Carousel/>
     </section>
     <section id="pageC">
-      <div className="grid-container">
-        <div>
-          <img src={assent1} alt="Prazo de entrega" className="sadtruck"/>
-          <p className="p-description">Prazo de entrega</p>
-          <p className="p-description-1">Os melhores prazos para você que não quer esperar tanto pelo seu produto</p>
+      <div className="container_grid">
+        <div className="flexbox">
+          <div className="item">
+            <div className="content">
+              <Lottie options={animaton_cart}
+                height={120}
+                width={120}
+                />
+            
+            <p className="p-description">Prazo de entrega</p>
+            <p className="p-description-1">Os melhores prazos para você que não quer esperar tanto pelo seu produto</p>
+            </div>
+          </div>
+          <div className="item">
+            <div className="content">
+            <Lottie options={animaton_pig}
+                height={120}
+                width={120}
+                />
+            <p className="p-description">Melhores descontos</p>
+            <p className="p-description-1">20% OFF, nas compras acima de 500 reais.</p> 
+            </div>
+          </div>
+          <div className="item">
+            <div className="content">
+            <Lottie options={animaton_card}
+                height={120}
+                width={120}
+                />
+            <p className="p-description">12x sem <br/> juros</p>
+            <p className="p-description-1">Parcele suas compras em todos os cartões.</p>
+            </div>
+          </div>
+          <div className="item">
+            <div className="content">
+            <Lottie options={animaton_btc_eth}
+                height={125}
+                width={125}
+                />
+            <p className="p-description">Quer mais descontos?</p>
+            <p className="p-description-1">Obtenha melhores descontos com pagamentos em criptomoedas.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <img src={assent2} alt="Prazo de entrega" />
-          <p className="p-description">Melhores descontos</p>
-          <p className="p-description-1">20% OFF, nas compras acima de 500 reais.</p>
-        </div>
-        <div>
-          <img src={assent3} alt="Prazo de entrega" />
-          <p className="p-description">12x sem <br/> juros</p>
-          <p className="p-description-1">Parcele suas compras em todos os cartões.</p>
-        </div>
-        <div>
-          <img src={assent4} alt="Prazo de entrega" />
-          <p className="p-description">Quer mais descontos?</p>
-          <p className="p-description-1">Obtenha melhores descontos com pagamentos em criptomoedas.</p>
+                <div class="flexbox_right container_rigt">
+           <ul>
+              <li class="one">
+                <a href="#">Equipe</a></li>
+              <li class="two">
+                <a href="#social">Social</a></li>
+              <li class="three">
+                <a href="#">Contato</a></li>
+            <hr />
+          </ul>
         </div>
       </div>
-
       <div className="megafooter">
         <p className="foot_p">
           SOBRE <br />
           <p className="p-chill">
-            Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu
-            sucesso! <br />
-            Oferecemos soluções inovadoras para que pessoas tenham a <br />
-            oportunidade de se desenvolver de forma contínua e arrojada. <br /> Além
-            de valorizar o cliente através de um atendimento especial e diferenciado.
+Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu sucesso!
+ Oferecemos soluções inovadoras para que pessoas tenham a 
+oportunidade de se desenvolver de forma contínua e arrojada. 
+Além de valorizar o cliente através de um atendimento especial e diferenciado.
           </p> 
         </p>
       </div>
@@ -122,7 +187,7 @@ function App() {
           />
         </div>
         <div>
-          <a href="https://github.com/Lane-Art-Design/website">Source Code</a>
+          <a href="https://github.com/Lane-Art-Design/website"> Source Code </a>
         </div>
       </div>
     </section>

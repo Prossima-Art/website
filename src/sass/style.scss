@@ -8,7 +8,7 @@
 @import "./variables.scss";
 @import "./syle_mobile.scss";
 @import "./head.scss";
-
+@import "./linkswap.sass";
 
 body {
   background: $bg_full;
@@ -17,6 +17,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -96,7 +97,7 @@ a {
     &._2 {
       width: 3px;
       height: 60px;
-      left: 140px;
+      left: 100px;
       top: 10px;
       animation-delay: 1s;
       animation-duration: 3s;
@@ -123,7 +124,7 @@ a {
     &._5 {
       width: 4px;
       height: 50px;
-      left: 10px;
+      left: 60px;
       top: 20px;
       animation-delay: 1s;
       animation-duration: 4s;
@@ -199,6 +200,7 @@ a {
     width: 116px;
     height: 220px;
     margin-left: 200px;
+    margin-top: 30px;
     text-align: right;
     font: $UX;
     letter-spacing: 1px;
@@ -239,65 +241,161 @@ a {
     opacity: 1;
   }
 }
+.Container_orcamento {
+  max-width: 300px;
+  
+  .btn_m1 {
+    /* *button [container] */
 
-.grid-container { /* Descrição de produtos em grid*/
-  margin-left:30px; 
-  display: flex;
-  align-items:flex-end;
-  justify-content:center;
-  grid-auto-flow: dense;
-  grid-gap: 3rem;
-  
-  img {
-    width: 35%;
-    margin-left: 80px;
-    object-fit: cover;
+  margin-top: 4em;
+  margin-left: -80px;
+  width: 225.73px;
+  height: 69.67px;
+  left: 217.52px;
+  top: 813.4px;
+
+
+
+  /* *Button */
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #90A6FC;
+  border-radius: 62.1165px;
+  border-color: transparent;
+
+
+  /* Orçamento */
+
+  position: absolute;
+  left: 15.27%;
+  right: 15.27%;
+  top: 28.23%;
+  bottom: 28.23%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+
+  color: #FFFFFF;
+
+
   }
-  
-  .p-description-1 {
-    left: 0%;
-    right: 78.17%;
-    top: 68.57%;
-    bottom: 0%;
-    font-family: Montserrat;
-    color: #FFFFFF;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
+    .paragraph_1{
+
+      /* Para qualquer tipo de necessidade */
+
+      position: absolute;
+      left: 11.33%;
+      right: 56.07%;
+      top: 21.47%;
+      bottom: 77.18%;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 44px;
+      /* identical to box height */
+
+      color: #FFFFFF;
+    }
+    .paragraph_1::first-line{
+      /* Design Gráfico */
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 73px;
+
+    }
+    
+}
+
+.container_grid {
+
+  margin-left: 30px;
+
+    .flexbox {
+      width: 600px;
+      float:left;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      box-sizing: border-box;
+      height: 700px;
+    
+    
+    .item {
+      box-sizing: border-box;
+      width: 50%;
+      margin-bottom: 39px;
+      padding: 0px 20px;
+    }
+    
+    .content {
+      text-align: center;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 10px;
+    }
+    
+    .p-description-1 {
+      text-align: center;
+      font-family: Montserrat;
+      color: #FFFFFF;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .p-description {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      color: #FFFFFF;
+      font-size: 22px;
+      max-width: 250px;
+      line-height: 1.5;
+    }
   }
-  .p-description {
-    left: 0%;
-    margin-left: 60px;
-    top: 43.01%;
-    bottom: 47.13%;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    color: #FFFFFF;
-    font-size: 30px;
-    max-width: 250px;
-    line-height: 1.5;
-  }
-  .sadtruck{
-    width: 20%;
+  .flexbox_right{
+    
+    float:right;
+    position: relative;
+    a {
+      font-family: Montserrat;
+      color: #FFFFFF;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+    // @import "./linkswap.sass";
   }
 }
 
 /* end grid */
 
 .megafooter {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: center;
+
+  margin-top: 750px;
+  margin-left: auto;
+	margin-right: auto;
   font: $font-14;
   color: #ffffff;
-  padding: 5px;
-  max-width: 100%;
+  max-width: 50rem;
+  text-align: center;
 
   .foot_p {
       font: $font-14;
       font-style: normal;
-      font-weight: bold;  
+      font-weight: bold;
 
     }
     .p-chill {
@@ -324,12 +422,13 @@ a {
   justify-content: space-between;
 
   > div {
-    margin-top: 30px;
+    margin-top: 100px;
     width: 100px;
     height: 20px;
   }
 
    a{
+     display: inline;
     color:#FFFFFF;
   }
 }

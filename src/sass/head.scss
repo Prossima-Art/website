@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .topnav {
+  margin-right: 5em;
   top: 73px;
   text-align: left;
   font: normal normal bold 26px/32px Montserrat;
@@ -20,6 +21,7 @@
     padding: 23px 32px;
     text-decoration: none;
     font-size: 16px;
+    max-width: 500px;
   }
 }
 
