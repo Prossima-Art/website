@@ -1,9 +1,11 @@
 import React from 'react'
-import '../sass/bootstrap.min.css'
-import '../sass/carousel.scss'
-import image_slider0 from '../img/image_slider0'
-import image_slider1 from '../img/image_slider1'
-import image_slider2 from '../img/image_slider2'
+import '../sass/bootstrap.min.css';
+import '../sass/carousel.scss';
+
+import image_slider0 from '../img/image_slider0';
+// import image_slider1 from '../img/image_slider1';
+import image_slider2 from '../img/image_slider2';
+import slider_0 from '../img/slider_0.svg';
 
 
 class Carousel extends React.Component {
@@ -21,7 +23,7 @@ class Carousel extends React.Component {
     {/* Wrapper for carousel items */}
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img src={image_slider1} alt="First Slide" />
+        <img src={slider_0} alt="First Slide" />
      
         <div className="container">
           <div className="UX"> UX/UI Design</div>
