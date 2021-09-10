@@ -18,7 +18,7 @@ npm install
 
 npm start
 ```
-server: http://localhost:3000/
+In a browser load page localhost:3000. now you can test the site.
 
 # Licence 
 
