@@ -7,6 +7,9 @@
 .carousel-indicators{
   bottom: -50px;
 }
+.carousel-control-next .carousel-control-prev{
+  margin-top: 200px;
+}
 .carousel-item {
   text-align: center;
   min-height: 280px;
@@ -14,7 +17,7 @@
   /* Prevent carousel from being distorted if for some reason image doesn't load */
 
   img {
-    width: 30%;
+    width: 20%;
     position: inherit;
     margin-right: 680px;
     text-align: center;
@@ -24,8 +27,8 @@
   }
 }
 
-// hr {
-//   overflow: hidden;
+hr {
+   overflow: hidden;
 //   position: relative;
 //   text-align: center;
-// }
+ }

@@ -2,14 +2,21 @@ import React from 'react';
 // import reactDom from 'react-dom';
 import './sass/style.scss';
 import logo from "./img/logo/logo.png";
-import Carousel from './componets/carousel';
+// import Carousel from './componets/carousel';
 import Lottie from 'react-lottie';
 import pig from './img/pig.json';
 import btc from './img/BTC.json';
 import cart from './img/cart.json';
 import card from './img/creditcard.json';
-
+import Logo from './componets/logo.json';
+import carousel_1 from './img/slider_0.svg';
+import carousel_2 from './img/slider_0.svg';
 function App() {
+  const Logo_animation = {
+    loop: false,
+    autoplay: true, 
+    animationData: Logo,
+  };
   const animaton_pig = {
     loop: true,
     autoplay: true, 
@@ -43,17 +50,74 @@ function App() {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+  window.addEventListener("load", () => {
+    var carousels = document.querySelectorAll(".carousel");
+    for (var i = 0; i < carousels.length; i++) {
+      carousel(carousels[i]);
+    }
+  });
+  
+  function carousel(root) {
+    var figure = root.querySelector("figure"),
+      nav = root.querySelector("nav"),
+      images = figure.children,
+      n = images.length,
+      gap = root.dataset.gap || 0,
+      bfc = "bfc" in root.dataset,
+      theta = (2 * Math.PI) / n,
+      currImage = 0;
+    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+    window.addEventListener("resize", () => {
+      setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+    });
+  
+    setupNavigation();
+  
+    function setupCarousel(n, s) {
+      var apothem = s / (2 * Math.tan(Math.PI / n));
+      figure.style.transformOrigin = `50% 50% ${-apothem}px`;
+  
+      for (var i = 0; i < n; i++) images[i].style.padding = `${gap}px`;
+      for (i = 1; i < n; i++) {
+        images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
+        images[i].style.transform = `rotateY(${i * theta}rad)`;
+      }
+      if (bfc)
+        for (i = 0; i < n; i++) images[i].style.backfaceVisibility = "hidden";
+  
+      rotateCarousel(currImage);
+    }
+  
+    function setupNavigation() {
+      nav.addEventListener("click", onClick, true);
+  
+      function onClick(e) {
+        e.stopPropagation();
+  
+        var t = e.target;
+        if (t.tagName.toUpperCase() != "BUTTON") return;
+  
+        if (t.classList.contains("next")) {
+          currImage++;
+        } else {
+          currImage--;
+        }
+  
+        rotateCarousel(currImage);
+      }
+    }
+  
+    function rotateCarousel(imageIndex) {
+      figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+    }
+  }
+  
+  
+
   
   return (
     
     <div className="App">
-    <meta charSet="UTF-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#6a82ad" />
-    <title>Lane Art Design</title>
-    <link rel="icon" href="./img/logo/logo.png" type="image/svg+xml" />
-    <link href="style.css" type="text/css" rel="stylesheet" />
     <section id="pageA">
       <div className="topnav">
         <div className="topnav-right row">
@@ -61,35 +125,37 @@ function App() {
             INICIO
           </a>
           <a href="#">
-            CUSTUMISE{" "}
+            PERSONALISE{" "}
             <em className="subtopnav">
-              <br /> Entorno!
+               Sua imagem!
             </em>
           </a>
           <a href="#pageC">
-            PERSONALISE{" "}
+            ANIME{" "}
             <em className="subtopnav">
               {" "}
-              <br /> Sua imagem!
+              <br /> Suas ideias!
             </em>
           </a>
           <a href="#">CONTATO</a>
         </div>
       </div>
-        <div className="Container_orcamento">
+
+         <Lottie options={Logo_animation}
+                height={720}
+                width={720}
+                style={{ position: "absolute" }}
+                />
+    </section>
+    <section id="pageB">
+
+    <div className="Container_orcamento">
           <p className="paragraph_1">
           Design Gráfico <br/>      
           Para qualquer tipo de necessidade
           </p>
           <button className="btn_m1"> Orçamento </button>
       </div>
-        {/* <Lottie options={defaultOptions}
-                height={400}
-                width={400}></Lottie> */}
-        
-    </section>
-    <section id="pageB">
-      
       <div className="waterfall">
         <div className="waterfall_drops _1" />
         <div className="waterfall_drops _2" />
@@ -102,11 +168,42 @@ function App() {
         <div className="waterfall_drops _9" />
         <div className="waterfall_drops _10"/>
       </div>
-      
-      <Carousel/>
+      <div className="carousel">
+        <figure>
+          <img src={carousel_1} alt />
+          <img src={carousel_1} alt />
+          <img src={carousel_1} alt />
+        </figure>
+        
+        <nav>
+          <button className="nav prev"/>
+          <button className="nav next"/>
+        </nav>
+      </div>
+
+      {/* <Carousel/> */}
+      <div className="container">
+          <div className="UX"> UX/UI Design</div>
+          <p>
+            UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
+          </p>
+          <button className="btn"> Veja Mais</button>
+          <button className="btn-or"> Orçamento</button>
+        </div>
+        
     </section>
     <section id="pageC">
+
+    <div className="container_left">
+          <div className="UX">3D,2D ilustrações</div>
+          <p>
+          Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
+          </p>
+          <button className="btn"> Veja Mais</button>
+          <button className="btn-or"> Orçamento</button>
+        </div>
       <div className="container_grid">
+
         <div className="flexbox">
           <div className="item">
             <div className="content">
@@ -150,13 +247,13 @@ function App() {
             </div>
           </div>
         </div>
-                <div class="flexbox_right container_rigt">
+                <div className="flexbox_right container_rigt">
            <ul>
-              <li class="one">
+              <li className="one">
                 <a href="#">Equipe</a></li>
-              <li class="two">
+              <li className="two">
                 <a href="#social">Social</a></li>
-              <li class="three">
+              <li className="three">
                 <a href="#">Contato</a></li>
             <hr />
           </ul>
