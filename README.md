@@ -1,5 +1,6 @@
-<img src="https://raw.githubusercontent.com/Lane-Art-Design/website/main/img/logo/logo.png"/>
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/Lane-Art-Design/website/main/src/img/logo/logo.png"/>
+</p>
 Hi folks❗
 
 This is Lane Art Design. 🏝️ 
@@ -10,8 +11,25 @@ With this we pretend to:
 1. Accept new ideas by anyone willing to participate
 2. Be known by the Community
 
+# Install
+
+```shell
+npm install 
+
+npm start
+```
+In a browser load page http://localhost:3000/. now you can test the site.
+
+# Licence 
+
+MIT License - Copyright (c) 2021 Lane Art Design
+
+
+<br>
+
 Thanks for your suport❗
 
 Aaw-yeah❗
 
 <img src="https://raw.githubusercontent.com/Lane-Art-Design/website/main/img/aaw-yeah.gif"/>
+  <p/>
