@@ -11,6 +11,19 @@ import card from './img/creditcard.json';
 import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import carousel_2 from './img/slider_0.svg';
+
+// right_bar
+import Group_1 from './img/Group_1.svg'
+import Group_2 from './img/Group_2.svg'
+import Group_3 from './img/Group_3.svg'
+import Group_4 from './img/Group_4.svg'
+
+
+import Linkedin from './img/linkedin.svg'
+import Mail from './img/mail.svg'
+import Github from './img/github.svg'
+import Instagram from './img/instagram.svg'
+
 function App() {
   const Logo_animation = {
     loop: false,
@@ -111,8 +124,33 @@ function App() {
       figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
     }
   }
+  // right_content grid
+
+  function setupTabs (){
+    document.querySelectorAll('.tab-btn').forEach(button=>{
+      button.addEventListener('click',()=>{
+        
+        
+        const sidebar = button.parentElement;
+        const tabs = sidebar.parentElement;
+        const tabNumber = button.dataset.forTab;
+        const tabActivate = tabs.querySelector(`.tab-content[data-tab="${tabNumber}"]`)
+        
+        sidebar.querySelectorAll('.tab-btn').forEach(button=>{
+          button.classList.remove('tab-btn-active')
+        })
+         tabs.querySelectorAll('.tab-content').forEach(tab=>{
+          tab.classList.remove('tab-content-active')
+        })
+        button.classList.add('tab-btn-active')
+        tabActivate.classList.add('tab-content-active')
+      })
+    })
+  }
   
-  
+  document.addEventListener('DOMContentLoaded',()=>{
+    setupTabs();
+  })
 
   
   return (
@@ -247,17 +285,38 @@ function App() {
             </div>
           </div>
         </div>
-                <div className="flexbox_right container_rigt">
-           <ul>
-              <li className="one">
-                <a href="#">Equipe</a></li>
-              <li className="two">
-                <a href="#social">Social</a></li>
-              <li className="three">
-                <a href="#">Contato</a></li>
-            <hr />
-          </ul>
+        
+      <div className="tabs">
+        <div className="sidebar">
+          {/* tabs buttons  */}
+          <button className="tab-btn tab-btn-active" data-for-tab={1}>EQUIPE</button>
+          <button className="tab-btn" data-for-tab={2}>CONTATO</button>
+          <button className="tab-btn" data-for-tab={3}>SOCIAL</button>
         </div>
+        {/* tabs content  */}
+        <div className="content">
+          <div className="tab-content tab-content-active" data-tab={1}>
+            <div class="grid_group ">
+              <div class="div1"> <img src={Group_1} alt="" /></div>
+              <div class="div2"> <img src={Group_2} alt="" /></div>
+              <div class="div3"> <img src={Group_3} alt="" /></div>
+              <div class="div4"> <img src={Group_4} alt="" /></div>
+            </div>
+          </div>
+          <div className="tab-content" data-tab={2}>
+            {/* <img src="https://i.postimg.cc/pXQjH7Rv/logo-2582747-960-720.png" alt="css logo" /> */}
+          </div>
+          <div className="tab-content" data-tab={3}>
+          <div class="grid_group">
+              <div class="div1 socials"> <img src={Linkedin} alt="Linkedin" /></div> 
+              <div class="div2 socials"> <img src={Mail} alt="Mail" /></div> 
+              <div class="div3 socials"> <img src={Instagram} alt="Instagram" /></div> 
+              <div class="div4 socials"> <img src={Github} alt="Github" /></div> 
+            </div>  
+          </div>
+        </div>
+      </div>
+   
       </div>
       <div className="megafooter">
         <p className="foot_p">
