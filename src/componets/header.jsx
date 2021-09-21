@@ -4,10 +4,10 @@ import '../sass/head.scss';
 import '../sass/style.scss';
 import Lottie from 'react-lottie';
 import Logo from '../componets/logo.json';
-import image_slider0 from '../img/image_slider0';
+// import image_slider0 from '../img/image_slider0';
 // import image_slider1 from '../img/image_slider1';
-import image_slider2 from '../img/image_slider2';
-import slider_0 from '../img/slider_0.svg';
+// import image_slider2 from '../img/image_slider2';
+// import slider_0 from '../img/slider_0.svg';
 
 
 class Header extends React.Component {
@@ -26,7 +26,7 @@ class Header extends React.Component {
                 <a className="active" href="#home">
                     INICIO
                 </a>
-                <a href="#">
+                <a href="#carousel">
                     PERSONALISE{" "}
                     <em className="subtopnav">
                     Sua imagem!
@@ -39,7 +39,7 @@ class Header extends React.Component {
                     <br /> Suas ideias!
                     </em>
                 </a>
-                <a href="#">CONTATO</a>
+                <a href="#contact">CONTATO</a>
                 </div>
             </div>
 

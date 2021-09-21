@@ -3,26 +3,26 @@ import React from 'react';
 import './sass/style.scss';
 import logo from "./img/logo/logo.png";
 // import Carousel from './componets/carousel';
-import Lottie from 'react-lottie';
-import pig from './img/pig.json';
-import btc from './img/BTC.json';
-import cart from './img/cart.json';
-import card from './img/creditcard.json';
-import Logo from './componets/logo.json';
+// import Lottie from 'react-lottie';
+// import pig from './img/pig.json';
+// import btc from './img/BTC.json';
+// import cart from './img/cart.json';
+// import card from './img/creditcard.json';
+// import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 // import carousel_2 from './img/slider_0.svg';
 
 // right_bar
-import Group_1 from './img/Group_1.svg'
-import Group_2 from './img/Group_2.svg'
-import Group_3 from './img/Group_3.svg'
-import Group_4 from './img/Group_4.svg'
+// import Group_1 from './img/Group_1.svg'
+// import Group_2 from './img/Group_2.svg'
+// import Group_3 from './img/Group_3.svg'
+// import Group_4 from './img/Group_4.svg'
 
 
-import Linkedin from './img/linkedin.svg'
-import Mail from './img/mail.svg'
-import Github from './img/github.svg'
-import Instagram from './img/instagram.svg'
+// import Linkedin from './img/linkedin.svg'
+// import Mail from './img/mail.svg'
+// import Github from './img/github.svg'
+// import Instagram from './img/instagram.svg'
 
 import Grid from './componets/Grid_section'
 
@@ -74,7 +74,7 @@ function App() {
         e.stopPropagation();
   
         var t = e.target;
-        if (t.tagName.toUpperCase() != "BUTTON") return;
+        if (t.tagName.toUpperCase() !== "BUTTON") return;
   
         if (t.classList.contains("next")) {
           currImage++;
@@ -147,11 +147,11 @@ function App() {
         <div className="waterfall_drops _10"/>
       </div>
       
-      <div className="carousel">
+      <div className="carousel" id="carousel">
         <figure>
-          <img src={carousel_1} alt />
-          <img src={carousel_1} alt />
-          <img src={carousel_1} alt />
+          <img src={carousel_1} alt="carousel" />
+          <img src={carousel_1} alt="carousel" />
+          <img src={carousel_1} alt="carousel" />
         </figure>
         
         <nav>
@@ -161,7 +161,7 @@ function App() {
       </div>
 
       {/* <Carousel/> */}
-      <div className="container">
+      <div className="container" id="#suport">
           <div className="UX"> UX/UI Design</div>
           <p>
             UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
@@ -196,7 +196,7 @@ function App() {
       <div id="footer">
       
         <div>
-          <a href="#">Suport</a>
+          <a href="#suport">Suport</a>
         </div>
         <div>
           <img

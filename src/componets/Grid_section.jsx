@@ -9,7 +9,7 @@ import pig from '../img/pig.json';
 import btc from '../img/BTC.json';
 import cart from '../img/cart.json';
 import card from '../img/creditcard.json';
-import Logo from '../componets/logo.json';
+// import Logo from '../componets/logo.json';
 // import carousel_1 from './img/slider_0.svg';
 // import carousel_2 from './img/slider_0.svg';
 
@@ -111,7 +111,7 @@ const animaton_pig = {
                     </div>
                     </div>
 
-                    <div className="tabs">
+                    <div className="tabs" id="contact">
                     <div className="sidebar">
                         {/* tabs buttons  */}
                         <button className="tab-btn tab-btn-active" data-for-tab={1}>EQUIPE</button>
