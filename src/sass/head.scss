@@ -22,6 +22,7 @@
     padding: 22px 32px;
     text-decoration: none;
     font-size: 16px;
+    max-width: 300px;
   }
 }
 
@@ -54,69 +55,6 @@
   float: right;
 }
 
-@media screen and (max-width: 980px) {
-  .topnav {
-    width: 100%;
-    margin-left: 50px;
-  }
-}
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
-.topnav {
-      
-      margin-right: 2em;
-      top: 73px;
-      text-align: left;
-      font: normal normal bold 26px/32px Montserrat;
-      color: #FFFFFF;
-      opacity: 1;
-      background-color: transparent;
-      color: #FFFFFF;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-
-      a {
-        float: left;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 22px 20px;
-        width: 130px;
-        text-decoration: none;
-        font-size: 16px;
-      }
-
-
-    .subtopnav {
-      top: 27px;
-      left: 22px;
-      width: 215px;
-      height: 60px;
-      // overflow-wrap: normal;
-      // overflow-wrap: break-word;
-      font: normal normal normal 26px/26px Grand Hotel;
-      letter-spacing: 0px;
-      color: #FFFFFF;
-    }
-
-    .topnav a {
-      &:hover {
-        color: #FFFFFF;
-        text-decoration: none;
-        opacity: 0.5;
-        background-color: transparent;
-      }
-
-      &.active {
-        background-color: transparent;
-      }
-    }
-
-    .topnav-right {
-      float: right;
-    }
-  }
 @media screen and (max-width: 980px) {
   .topnav {
     width: 100%;

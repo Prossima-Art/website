@@ -66,7 +66,10 @@ a {
 #pageA, #pageB, #pageC {
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
   background-size: cover;
+  // width: 1200px;
 }
 
 .waterfall {
@@ -74,7 +77,7 @@ a {
   height: 1900px;
   align-items: center;
   position: absolute;
-  top: 980px;
+  top: 0px;
   left: 700px;
 
   .waterfall_drops {
@@ -84,7 +87,7 @@ a {
     animation: waterfall 2s linear infinite;
 
     &._1 {
-      width: 3px;
+      width: .6px;
       height: 40px;
       left: 40px;
       top: 20px;
@@ -93,7 +96,7 @@ a {
     }
 
     &._2 {
-      width: 3px;
+      width: 0.5px;
       height: 60px;
       left: 100px;
       top: 10px;
@@ -102,7 +105,7 @@ a {
     }
 
     &._3 {
-      width: 4px;
+      width: 0.6px;
       height: 70px;
       left: 105px;
       top: 40px;
@@ -111,8 +114,8 @@ a {
     }
 
     &._4 {
-      width: 3px;
-      height: 20px;
+      width: .5px;
+      height: 50px;
       left: 40px;
       top: 120px;
       animation-delay: 3s;
@@ -120,8 +123,8 @@ a {
     }
 
     &._5 {
-      width: 4px;
-      height: 50px;
+      width: .3px;
+      height: 30px;
       left: 60px;
       top: 20px;
       animation-delay: 1s;
@@ -130,22 +133,22 @@ a {
 
     &._6 {
       width: 4px;
-      height: 30px;
+      height: 15px;
       left: 130px;
       top: 100px;
       animation-delay: 5s;
     }
 
     &._7 {
-      width: 4.5px;
-      height: 35px;
+      width: .7px;
+      height: 15px;
       left: 60px;
       top: 100px;
       animation-duration: 1s;
     }
 
     &._8 {
-      width: 4px;
+      width: 1px;
       height: 4px;
       left: 67px;
       top: 300px;
@@ -153,7 +156,7 @@ a {
     }
 
     &._9 {
-      width: 2.7px;
+      width: .8px;
       height: 25px;
       left: 65px;
       top: 230px;
@@ -161,7 +164,7 @@ a {
     }
 
     &._10 {
-      width: 3px;
+      width: 1px;
       height: 42px;
       left: 60px;
       top: 330px;
@@ -175,7 +178,6 @@ a {
     top: 80%;
   }
 }
-
 .container_left {
   margin-top: -500px;
   margin-left: 60px;
@@ -238,8 +240,9 @@ a {
 }
 
 .container {
-  margin-top: auto;
-  margin-right: 5em;
+  position: relative;
+  left:650px;
+  top:-405px;
   float: right;
   
   p {
@@ -254,7 +257,6 @@ a {
     // max-width: 200px;
     width: 116px;
     height: 220px;
-    
     margin-top: 30px;
     text-align: right;
     font: $UX;
@@ -389,20 +391,20 @@ $viewer-distance: 500px;
     }
   }
 // aumentar tamnaho da section_B
-  nav {
-    display: relative;
-    // margin-left:50px;
-    // justify-content: center;
-    // margin: 20px 0 0;
-    // margin-top:300px;
 
+  nav {
+    // top:200px;
+    // margin-left:50px;
+    
+    
     button {
-      position: relative;
+      
+    
+      // position: absolute;
+      
       width: 154.6px;
       height: 67.07px;
       // left: 140.23px;
-      top: 200px;
-      
       cursor: pointer;
       color: transparent;
       letter-spacing: 1px;
@@ -410,12 +412,14 @@ $viewer-distance: 500px;
       border: none;
     }
     .prev{
+      
       background-image: url('../img/carousel/arrow_left.svg');
       background-repeat: no-repeat;
       background-color: transparent;
       border: none;
     }
     .next{
+      top: 300px;
       background-image: url('../img/carousel/arrow_right.svg');
       background-repeat: no-repeat;
       background-color: transparent;
@@ -576,16 +580,15 @@ $viewer-distance: 5000px;
   }
 
   nav {
-    position:fixed;
-
-    // margin-top: 00px;
-    justify-content: left;
+    position:absolute;
+    display: flex;
+    top: 400px;
     
-    // margin-top: 40em;
 
     button {
       // margin-top:400px;
-      
+      width: 43px;
+      height: 43px;
       cursor: pointer;
       color: transparent;
       letter-spacing: 1px;
@@ -607,10 +610,10 @@ $viewer-distance: 5000px;
   }
 }
 
-// Equipe bar
+// Team grid
 .tabs {
   position: absolute;
-  left: 400px;
+  left: 600px;
   float: right;
   text-decoration: none;
   display: flex;
@@ -622,7 +625,7 @@ $viewer-distance: 5000px;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  width: 100%;
+  width: 80%;
   min-height: 100vh;
   
 }
@@ -673,15 +676,51 @@ $viewer-distance: 5000px;
   position: absolute;
   top: 1rem;
   display: none;
+  img {
+    width: 350px;
+  }
+  button{
+    background: transparent url('../img/send.svg');
+    height: 45px;
+    width: 50px;
+    left: 450.3497314453125px;
+    top: 421.36126708984375px;
+    top: 20px;
+    cursor: pointer;
+    border:none;
+  }
+  input{
+    margin: 0 auto;
+    height: 55.044219970703125px;
+    width: 430.0877380371094px;
+    background: #C4C4C4;
+    border-radius: 10px;
+    border:none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+    input:active{
+      border:none;
+    }
+  }
+  input::placeholder { font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+  }
 }
 
 .tab-content-active {
   display: block;
 }
 
-.tab-content img {
-  width: 350px;
-}
 
 
 // Equipe
@@ -704,7 +743,7 @@ $viewer-distance: 5000px;
   top: 87px;
   
   img{width:150px;}
-  
+
   .socials img{
     width: 76.5px;
     height: 80px;
