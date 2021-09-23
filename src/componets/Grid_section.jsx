@@ -129,7 +129,21 @@ const animaton_pig = {
                         </div>
                         </div>
                         <div className="tab-content" data-tab={2}>
-                        <input type=""  placeholder="Digite sua mensagem"></input><button type="submit"></button>
+                        <form name="contact" method="POST" data-netlify="true">
+                          <p>
+                          <label><textarea required name="message" placeholder="Digite sua messagem"></textarea></label> 
+                          <p/>
+                          </p>
+                          <p>
+                            <label><input  required type="text" name="name" placeholder="Seu nome" /></label>   
+                          </p>
+                          <p>
+                            <label><input required type="email" name="email" placeholder="Seu E-mail"/></label>
+                          </p>
+                          <p>
+                            <button type="submit"></button>
+                          </p>
+                        </form>
                         </div>
                         <div className="tab-content" data-tab={3}>
                         <div class="grid_group">

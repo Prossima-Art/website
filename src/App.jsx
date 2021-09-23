@@ -1,32 +1,10 @@
 import React from 'react';
-// import reactDom from 'react-dom';
 import './sass/style.scss';
 import logo from "./img/logo/logo.png";
-// import Carousel from './componets/carousel';
-// import Lottie from 'react-lottie';
-// import pig from './img/pig.json';
-// import btc from './img/BTC.json';
-// import cart from './img/cart.json';
-// import card from './img/creditcard.json';
-// import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
-// import carousel_2 from './img/slider_0.svg';
-
-// right_bar
-// import Group_1 from './img/Group_1.svg'
-// import Group_2 from './img/Group_2.svg'
-// import Group_3 from './img/Group_3.svg'
-// import Group_4 from './img/Group_4.svg'
-
-
-// import Linkedin from './img/linkedin.svg'
-// import Mail from './img/mail.svg'
-// import Github from './img/github.svg'
-// import Instagram from './img/instagram.svg'
-
-import Grid from './componets/Grid_section'
-
-import Header from './componets/header'
+import Grid from './componets/Grid_section';
+// import PreLoader2 from './componets/Pre_load';
+import Header from './componets/header';
 
 function App() {
   window.addEventListener("load", () => {
@@ -122,6 +100,8 @@ function App() {
   return (
     
     <div className="App">
+      {/* <PreLoader2 className="Loading"/> */}
+      
      <section id="pageA">
       <Header/>
     </section>
