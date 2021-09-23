@@ -147,10 +147,10 @@ const animaton_pig = {
                         </div>
                         <div className="tab-content" data-tab={3}>
                         <div class="grid_group">
-                            <div class="div1 socials"> <img src={Linkedin} alt="Linkedin" /></div> 
-                            <div class="div2 socials"> <img src={Mail} alt="Mail" /></div> 
-                            <div class="div3 socials"> <img src={Instagram} alt="Instagram" /></div> 
-                            <div class="div4 socials"> <img src={Github} alt="Github" /></div> 
+                            <div class="div1 socials" > <a href="https://www.linkedin.com/in/alannelucena?originalSubdomain=br"> <img src={Linkedin} alt="Linkedin" /> </a> </div> 
+                            <div class="div2 socials" > <img src={Mail} alt="Mail" /></div> 
+                            <div class="div3 socials" > <a href="https://www.instagram.com/laneartdesign/?hl=en"> <img src={Instagram} alt="Instagram" /></a></div> 
+                            <div class="div4 socials"><a href="https://github.com/Lane-Art-Design"> <img src={Github} alt="Github" /></a></div> 
                         </div>  
                         </div>
                     </div>
