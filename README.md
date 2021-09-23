@@ -22,9 +22,7 @@ npm install
 
 npm start
 ```
-
 In a browser load page http://localhost:3000/. now you can test the site.
-=======
 server: http://localhost:3000/
 
 
