@@ -101,9 +101,9 @@ function App() {
     
     <div className="App">
       {/* <PreLoader2 className="Loading"/> */}
-      
-     <section id="pageA">
       <Header/>
+     <section id="pageA">
+      
     </section>
     <section id="pageB">
 

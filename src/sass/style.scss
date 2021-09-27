@@ -534,12 +534,13 @@ $viewer-distance: 5000px;
 .carousel {
   float: left;
   display: flex;
-  position: relative;
+  position: absolute;
   flex-direction: row;
   // margin-left: 300px;
   justify-content: space-between;
   // padding: 100px;
   width: auto;
+  height: 600px;
   perspective: $viewer-distance; //muito importante
   overflow: hidden;
   // align-items: center;
@@ -566,7 +567,8 @@ $viewer-distance: 5000px;
   nav {
     position: absolute;
     display: flex;
-    top: 400px;
+    top: 450px;
+    left: 100px;
 
     button {
       // margin-top:400px;
@@ -662,15 +664,25 @@ $viewer-distance: 5000px;
     width: 350px;
   }
   button {
-    background: transparent url("../img/send.svg");
-    height: 45px;
-    width: 50px;
-    left: 450.3497314453125px;
-    top: 421.36126708984375px;
-    top: 20px;
-    cursor: pointer;
-    border: none;
-  }
+    // background: transparent url("../img/send.svg");
+    
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
+
+    &:hover {
+      opacity: 0.2;
+      color: #ffffff;
+    }
+  } 
 }
 .tab-content-active {
   display: block;
@@ -707,6 +719,7 @@ $viewer-distance: 5000px;
   }
   input:focus {
     border-color: #6a82ad;
+    transition: 0.4s;
   }
 }
 .tab-content textarea:focus {
@@ -768,3 +781,22 @@ $viewer-distance: 5000px;
 //   position: absolute;
 //   top: 50%;
 // }
+
+.btn {
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
+
+  &:hover {
+    opacity: 0.2;
+    color: #ffffff;
+  }
+}

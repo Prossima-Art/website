@@ -1,19 +1,15 @@
 import React from 'react'
-
 import '../sass/style.scss';
 import '../sass/style_mobile.scss';
 
-
+// right_grid
 import Lottie from 'react-lottie';
 import pig from '../img/pig.json';
 import btc from '../img/BTC.json';
 import cart from '../img/cart.json';
 import card from '../img/creditcard.json';
-// import Logo from '../componets/logo.json';
-// import carousel_1 from './img/slider_0.svg';
-// import carousel_2 from './img/slider_0.svg';
 
-// right_bar
+// left_grid
 import Group_1 from '../img/Group_1.svg'
 import Group_2 from '../img/Group_2.svg'
 import Group_3 from '../img/Group_3.svg'
@@ -138,10 +134,10 @@ const animaton_pig = {
                             <label><input  required type="text" name="name" placeholder="Seu nome" /></label>   
                           </p>
                           <p>
-                            <label><input required type="email" name="email" placeholder="Seu E-mail"/></label>
+                            <label><input required type="email"  name="email" placeholder="Seu E-mail"/></label>
                           </p>
                           <p>
-                            <button type="submit"></button>
+                            <button type="submit" className="btn">Enviar</button>
                           </p>
                         </form>
                         </div>
