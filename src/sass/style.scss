@@ -239,8 +239,8 @@ a {
 
 .container {
   position: relative;
-  left: 650px;
-  top: -405px;
+  left: 720px;
+  top:-550px;
   float: right;
 
   p {
@@ -298,8 +298,8 @@ a {
 .Container_orcamento {
   // max-width: 300px;
   position: absolute;
-  margin-top: -300px;
-  margin-left: 225px;
+  margin-top: -430px;
+  margin-left: 125px;
 
   .btn_m1 {
     margin-top: 0.7em;
@@ -614,6 +614,7 @@ $viewer-distance: 5000px;
   min-height: 100vh;
 }
 
+
 .sidebar {
   display: flex;
   align-items: center;
@@ -781,7 +782,25 @@ $viewer-distance: 5000px;
 //   position: absolute;
 //   top: 50%;
 // }
+@media only screen and (min-width: 768px) {
+  .grid_group{
+    top: 100px;
+    padding: 0;
+  }
+  
+body {
+  
+  background: url('../img/BGFull.svg') 50% 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
+
+}
 .btn {
   background: #90a6fc 0% 0% no-repeat padding-box;
   font: normal normal normal 18px/20px Montserrat;

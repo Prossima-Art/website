@@ -20,33 +20,41 @@ class Header extends React.Component {
   };
           return(
             <>
-
-            <div className="topnav">
-                <div className="topnav-right row">
-                <a className="active" href="#home">
-                    INICIO
-                </a>
-                <a href="#carousel">
-                    PERSONALISE{" "}
-                    <em className="subtopnav">
-                    Sua imagem!
-                    </em>
-                </a>
-                <a href="#pageC">
-                    ANIME{" "}
-                    <em className="subtopnav">
-                    {" "}
-                    <br /> Suas ideias!
-                    </em>
-                </a>
-                <a href="#contact">CONTATO</a>
-                </div>
-            </div>
+<div className="topnav">
+   <div className="topnav-right row">
+      <ul>
+         <li><a className="active" href="#home">
+            INICIO
+            </a>
+         </li>
+         <li>
+            <a href="#carousel">
+            PERSONALISE{" "}
+            <em className="subtopnav">
+            Sua imagem!
+            </em>
+            </a>
+         </li>
+         <li>
+            <a href="#pageC">
+            ANIME{" "}
+            <em className="subtopnav">
+            {" "}
+            <br /> Suas ideias!
+            </em>
+            </a>
+         </li>
+         <li>
+            <a href="#contact">CONTATO</a>
+         </li>
+      </ul>
+   </div>
+</div>
 
              <Lottie options={Logo_animation}
                 height={720}
                 width={720}
-                style={{ position: "absolute" }}
+                style={{ left:"0", right:"0" }}
                 />
             </>
           )

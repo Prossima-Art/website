@@ -161,6 +161,18 @@ function App() {
             <button className="btn"> Veja Mais</button>
             <button className="btn-or"> Orçamento</button>
       </div>
+      
+       {/* <div className="Carousel_3D" id="carousel">
+        <figure>
+          <img src={carousel_1} alt="carousel" />
+          <img src={carousel_1} alt="carousel" />
+          <img src={carousel_1} alt="carousel" />
+        </figure>
+        <nav>
+          <button className="nav prev"/>
+          <button className="nav next"/>
+        </nav> 
+      </div>  */}
       <Grid/>
       <div className="megafooter">
         <p className="foot_p">
