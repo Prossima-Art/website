@@ -178,6 +178,10 @@ a {
     top: 80%;
   }
 }
+.flex_contanier{
+  display: flex;
+  flex-direction: row;
+}
 .container_left {
   margin-top: -500px;
   margin-left: 60px;
@@ -352,19 +356,22 @@ a {
   margin-left: 30px;
 
   // Carousel configuration parameters
-  $item-width: 50%; // Now we can use percentages!
-  $item-separation: 0px; // This now is set with Js
+  $item-width: 20%; // we can use percentages!
+  $item-separation: 0px; // This is set with Js
   $viewer-distance: 500px;
-
+  // .carousel_3D {
+  
+  // }
   .carousel {
-    float: left;
+    
     padding: 20px;
     // width: 100%;
     perspective: $viewer-distance;
     overflow: hidden;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    
+    
+    
 
     figure {
       margin: 0;
@@ -390,11 +397,8 @@ a {
       // margin-left:50px;
 
       button {
-        // position: absolute;
-
         width: 154.6px;
         height: 67.07px;
-        // left: 140.23px;
         cursor: pointer;
         color: transparent;
         letter-spacing: 1px;
@@ -416,6 +420,7 @@ a {
       }
     }
   }
+  
   .flexbox {
     width: 600px;
     float: left;

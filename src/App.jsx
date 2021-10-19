@@ -3,7 +3,6 @@ import './sass/style.scss';
 import logo from "./img/logo/logo.png";
 import carousel_1 from './img/slider_0.svg';
 import Grid from './componets/Grid_section';
-// import PreLoader2 from './componets/Pre_load';
 import Header from './componets/header';
 
 function App() {
@@ -100,10 +99,9 @@ function App() {
   return (
     
     <div className="App">
-      {/* <PreLoader2 className="Loading"/> */}
-      <Header/>
-     <section id="pageA">
       
+     <section id="pageA">
+     <Header/>
     </section>
     <section id="pageB">
 
@@ -126,7 +124,7 @@ function App() {
         <div className="waterfall_drops _9" />
         <div className="waterfall_drops _10"/>
       </div>
-      
+      <div className="grid_carousel">
       <div className="carousel" id="carousel">
         <figure>
           <img src={carousel_1} alt="carousel" />
@@ -149,41 +147,45 @@ function App() {
           <button className="btn"> Veja Mais</button>
           <button className="btn-or"> Orçamento</button>
         </div>
-        
+        </div>
       </section>
       <section id="pageC">
 
-      <div className="container_left">
+      <div className="container_left ">
             <div className="UX">3D,2D ilustrações</div>
             <p>
-            Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
+              Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
             </p>
             <button className="btn"> Veja Mais</button>
             <button className="btn-or"> Orçamento</button>
       </div>
       
-       {/* <div className="Carousel_3D" id="carousel">
+      <div>
+      <div className="carousel" id="carousel">
         <figure>
           <img src={carousel_1} alt="carousel" />
           <img src={carousel_1} alt="carousel" />
           <img src={carousel_1} alt="carousel" />
         </figure>
+        
         <nav>
           <button className="nav prev"/>
           <button className="nav next"/>
-        </nav> 
-      </div>  */}
+        </nav>
+      </div>
+      </div>
       <Grid/>
       <div className="megafooter">
-        <p className="foot_p">
-          SOBRE <br />
+
+        <nav className="foot_p">
+          SOBRE 
           <p className="p-chill">
-            Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu sucesso!
+              Pessoas apaixonadas pelo que fazem e dispostas a ajudá-lo a alcançar o seu sucesso!
             Oferecemos soluções inovadoras para que pessoas tenham a 
             oportunidade de se desenvolver de forma contínua e arrojada. 
             Além de valorizar o cliente através de um atendimento especial e diferenciado.
           </p> 
-        </p>
+        </nav>
       </div>
       <div id="footer">
       
