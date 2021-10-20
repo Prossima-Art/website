@@ -1,7 +1,6 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 @import "./variables.scss";
 @import "./style_mobile.scss";
@@ -19,9 +18,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: .7rem;
+  width: 0.7rem;
 }
-
 
 /* Track */
 
@@ -42,7 +40,7 @@ body {
 p {
   font: $font-14;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
 }
 
@@ -53,7 +51,7 @@ section {
 }
 
 a {
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
 #lottie {
@@ -63,10 +61,15 @@ a {
   background-color: transparent;
 }
 
-#pageA, #pageB, #pageC {
+#pageA,
+#pageB,
+#pageC {
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
   background-size: cover;
+  // width: 1200px;
 }
 
 .waterfall {
@@ -74,7 +77,7 @@ a {
   height: 1900px;
   align-items: center;
   position: absolute;
-  top: 980px;
+  top: 0px;
   left: 700px;
 
   .waterfall_drops {
@@ -84,7 +87,7 @@ a {
     animation: waterfall 2s linear infinite;
 
     &._1 {
-      width: 3px;
+      width: 0.6px;
       height: 40px;
       left: 40px;
       top: 20px;
@@ -93,7 +96,7 @@ a {
     }
 
     &._2 {
-      width: 3px;
+      width: 0.5px;
       height: 60px;
       left: 100px;
       top: 10px;
@@ -102,7 +105,7 @@ a {
     }
 
     &._3 {
-      width: 4px;
+      width: 0.6px;
       height: 70px;
       left: 105px;
       top: 40px;
@@ -111,8 +114,8 @@ a {
     }
 
     &._4 {
-      width: 3px;
-      height: 20px;
+      width: 0.5px;
+      height: 50px;
       left: 40px;
       top: 120px;
       animation-delay: 3s;
@@ -120,8 +123,8 @@ a {
     }
 
     &._5 {
-      width: 4px;
-      height: 50px;
+      width: 0.3px;
+      height: 30px;
       left: 60px;
       top: 20px;
       animation-delay: 1s;
@@ -130,22 +133,22 @@ a {
 
     &._6 {
       width: 4px;
-      height: 30px;
+      height: 15px;
       left: 130px;
       top: 100px;
       animation-delay: 5s;
     }
 
     &._7 {
-      width: 4.5px;
-      height: 35px;
+      width: 0.7px;
+      height: 15px;
       left: 60px;
       top: 100px;
       animation-duration: 1s;
     }
 
     &._8 {
-      width: 4px;
+      width: 1px;
       height: 4px;
       left: 67px;
       top: 300px;
@@ -153,7 +156,7 @@ a {
     }
 
     &._9 {
-      width: 2.7px;
+      width: 0.8px;
       height: 25px;
       left: 65px;
       top: 230px;
@@ -161,7 +164,7 @@ a {
     }
 
     &._10 {
-      width: 3px;
+      width: 1px;
       height: 42px;
       left: 60px;
       top: 330px;
@@ -175,12 +178,11 @@ a {
     top: 80%;
   }
 }
-
 .container_left {
   margin-top: -500px;
   margin-left: 60px;
   float: left;
-  
+
   p {
     font: normal normal normal 30px/37px Montserrat;
     letter-spacing: 0px;
@@ -193,18 +195,17 @@ a {
     // max-width: 200px;
     width: 116px;
     height: 220px;
-    
+
     margin-top: 30px;
     text-align: left;
-    font: $UX;
+    font: normal normal normal 90px/110px Fredericka the Great;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 1;
   }
 
   .btn {
-    
-    background: #90A6FC 0% 0% no-repeat padding-box;
+    background: #90a6fc 0% 0% no-repeat padding-box;
     font: normal normal normal 18px/20px Montserrat;
     // padding: 8px 20px 10px 20px;
     color: #ffffff;
@@ -215,11 +216,10 @@ a {
     height: 55px;
     opacity: 1;
     transition-duration: 0.4s;
-    
 
     &:hover {
       opacity: 0.2;
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 
@@ -230,7 +230,7 @@ a {
     font: normal normal normal 16px/32px Montserrat;
     border: transparent;
     cursor: pointer;
-    color: #FFFFFF;
+    color: #ffffff;
     letter-spacing: 0px;
     margin-left: 30px;
     opacity: 1;
@@ -238,10 +238,11 @@ a {
 }
 
 .container {
-  margin-top: auto;
-  margin-right: 5em;
+  position: relative;
+  left: 720px;
+  top:-550px;
   float: right;
-  
+
   p {
     font: normal normal normal 30px/37px Montserrat;
     letter-spacing: 0px;
@@ -254,18 +255,16 @@ a {
     // max-width: 200px;
     width: 116px;
     height: 220px;
-    
     margin-top: 30px;
     text-align: right;
     font: $UX;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 1;
   }
 
   .btn {
-    
-    background: #90A6FC 0% 0% no-repeat padding-box;
+    background: #90a6fc 0% 0% no-repeat padding-box;
     font: normal normal normal 18px/20px Montserrat;
     // padding: 8px 20px 10px 20px;
     color: #ffffff;
@@ -279,7 +278,7 @@ a {
 
     &:hover {
       opacity: 0.2;
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 
@@ -290,7 +289,7 @@ a {
     font: normal normal normal 16px/32px Montserrat;
     border: transparent;
     cursor: pointer;
-    color: #FFFFFF;
+    color: #ffffff;
     letter-spacing: 0px;
     margin-left: 30px;
     opacity: 1;
@@ -299,161 +298,157 @@ a {
 .Container_orcamento {
   // max-width: 300px;
   position: absolute;
-  margin-top: -300px;
-  margin-left: 225px;
-  
+  margin-top: -430px;
+  margin-left: 125px;
 
   .btn_m1 {
-  margin-top: 0.7em;
-  
-  width: 225.73px;
-  height: 69.67px;
-  left: 217.52px;
-  top: 813.4px;
-  /* *Button */
-  background: #90A6FC;
-  border-radius: 62.1165px;
-  border-color: transparent;
-  /* Orçamento */
-  
-  left: 15.27%;
-  right: 15.27%;
-  top: 28.23%;
-  bottom: 28.23%;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 32px;
-  color: #FFFFFF;
+    margin-top: 0.7em;
+
+    width: 225.73px;
+    height: 69.67px;
+    left: 217.52px;
+    top: 813.4px;
+    /* *Button */
+    background: #90a6fc;
+    border-radius: 62.1165px;
+    border-color: transparent;
+    /* Orçamento */
+
+    left: 15.27%;
+    right: 15.27%;
+    top: 28.23%;
+    bottom: 28.23%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff;
   }
- .paragraph_1{
-   
-   left: 11.33%;
-   right: 56.07%;
-   top: 21.47%;
-   bottom: 77.18%;
-   font-family: Montserrat;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 30px;
-   line-height: 44px;
-   /* identical to box height */
-   color: #FFFFFF;
- }
- .paragraph_1::first-line{
-   /* Design Gráfico */
-   font-family: Montserrat;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 60px;
-   line-height: 73px;
- }
- 
+  .paragraph_1 {
+    left: 11.33%;
+    right: 56.07%;
+    top: 21.47%;
+    bottom: 77.18%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 44px;
+    /* identical to box height */
+    color: #ffffff;
+  }
+  .paragraph_1::first-line {
+    /* Design Gráfico */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 73px;
+  }
 }
 
 .container_grid {
-
   margin-left: 30px;
-  
-// Carousel configuration parameters
-$item-width: 50%; // Now we can use percentages!
-$item-separation: 0px; // This now is set with Js
-$viewer-distance: 500px;
 
-.carousel {
-  float: left;
-  padding: 20px;
-  // width: 100%;
-  perspective: $viewer-distance;
-  overflow: hidden;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  // Carousel configuration parameters
+  $item-width: 50%; // we can use percentages!
+  $item-separation: 0px; // This is set with Js
+  $viewer-distance: 500px;
+  // .carousel_3D {
+  //   position: relative;
+  //   left: 250px;
+  // }
+  .carousel {
+    
+    padding: 20px;
+    // width: 100%;
+    perspective: $viewer-distance;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
-  figure {
-    margin: 0;
-    width: $item-width;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
+    figure {
+      margin: 0;
+      width: $item-width;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
 
-    img {
-      width: 100%;
-      padding: 0 $item-separation / 2;
-      &:not(:first-of-type) {
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin-right: 200px;
+      img {
+        width: 100%;
+        padding: 0 ($item-separation, 2);
+        &:not(:first-of-type) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          margin-right: 200px;
+        }
+      }
+    }
+    // aumentar tamnaho da section_B
+
+    nav {
+      // top:200px;
+      // margin-left:50px;
+
+      button {
+        // position: absolute;
+
+        width: 154.6px;
+        height: 67.07px;
+        // left: 140.23px;
+        cursor: pointer;
+        color: transparent;
+        letter-spacing: 1px;
+        padding: 40px 40px;
+        border: none;
+      }
+      .prev {
+        background-image: url("../img/carousel/arrow_left.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+      .next {
+        top: 300px;
+        background-image: url("../img/carousel/arrow_right.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
       }
     }
   }
-// aumentar tamnaho da section_B
-  nav {
-    display: relative;
-    // margin-left:50px;
-    // justify-content: center;
-    // margin: 20px 0 0;
-    // margin-top:300px;
+  
+  .flexbox {
+    width: 600px;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: 700px;
 
-    button {
-      position: relative;
-      width: 154.6px;
-      height: 67.07px;
-      // left: 140.23px;
-      top: 200px;
-      
-      cursor: pointer;
-      color: transparent;
-      letter-spacing: 1px;
-      padding: 40px 40px;
-      border: none;
-    }
-    .prev{
-      background-image: url('../img/carousel/arrow_left.svg');
-      background-repeat: no-repeat;
-      background-color: transparent;
-      border: none;
-    }
-    .next{
-      background-image: url('../img/carousel/arrow_right.svg');
-      background-repeat: no-repeat;
-      background-color: transparent;
-      border: none;
-    }
-  }
-}
-    .flexbox {
-      width: 600px;
-      float:left;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: flex-start;
-      box-sizing: border-box;
-      height: 700px;
-    
-    
     .item {
       box-sizing: border-box;
       width: 50%;
       margin-bottom: 39px;
       padding: 0px 20px;
     }
-    
-    .content {
 
+    .content {
       text-align: center;
       box-sizing: border-box;
       height: 100%;
       padding: 10px;
     }
-    
+
     .p-description-1 {
       text-align: center;
       font-family: Montserrat;
-      color: #FFFFFF;
+      color: #ffffff;
       font-weight: 300;
       font-size: 16px;
       line-height: 1.5;
@@ -462,19 +457,18 @@ $viewer-distance: 500px;
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 22px;
       max-width: 250px;
       line-height: 1.5;
     }
   }
-  .flexbox_right{
-    
-    float:right;
+  .flexbox_right {
+    float: right;
     position: relative;
     a {
       font-family: Montserrat;
-      color: #FFFFFF;
+      color: #ffffff;
       font-weight: 300;
       font-size: 16px;
       line-height: 1.5;
@@ -487,32 +481,30 @@ $viewer-distance: 500px;
 /* end grid */
 
 .megafooter {
-
   margin-top: 750px;
   margin-left: auto;
-	margin-right: auto;
+  margin-right: auto;
   font: $font-14;
   color: #ffffff;
   max-width: 50rem;
   text-align: center;
 
   .foot_p {
-      font: $font-14;
-      font-style: normal;
-      font-weight: bold;
-
-    }
-    .p-chill {
-      left: 0%;
-      right: 78.17%;
-      top: 68.57%;
-      bottom: 0%;
-      font-family: Montserrat;
-      color: #FFFFFF;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.5;
-    }
+    font: $font-14;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .p-chill {
+    left: 0%;
+    right: 78.17%;
+    top: 68.57%;
+    bottom: 0%;
+    font-family: Montserrat;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 /* footer :) */
@@ -531,27 +523,28 @@ $viewer-distance: 500px;
     height: 20px;
   }
 
-   a{
-     display: inline;
-    color:#FFFFFF;
+  a {
+    display: inline;
+    color: #ffffff;
   }
 }
 // teste carousel
 
 // Carousel configuration parameters
 $item-width: 90%; // Now we can use percentages
-$item-separation: 30px; 
+$item-separation: 30px;
 $viewer-distance: 5000px;
 
 .carousel {
   float: left;
   display: flex;
-  position: relative;    
+  position: absolute;
   flex-direction: row;
   // margin-left: 300px;
   justify-content: space-between;
   // padding: 100px;
   width: auto;
+  height: 600px;
   perspective: $viewer-distance; //muito importante
   overflow: hidden;
   // align-items: center;
@@ -564,7 +557,7 @@ $viewer-distance: 5000px;
 
     img {
       width: 100%;
-      padding: 0 $item-separation / 2;
+      padding: 0 ($item-separation, 2);
       &:not(:first-of-type) {
         position: absolute;
         // margin-left: -100px;
@@ -576,30 +569,29 @@ $viewer-distance: 5000px;
   }
 
   nav {
-    position:fixed;
-
-    // margin-top: 00px;
-    justify-content: left;
-    
-    // margin-top: 40em;
+    position: absolute;
+    display: flex;
+    top: 450px;
+    left: 100px;
 
     button {
       // margin-top:400px;
-      
+      width: 43px;
+      height: 43px;
       cursor: pointer;
       color: transparent;
       letter-spacing: 1px;
       padding: 40px 40px;
       border: none;
     }
-    .prev{
-      background-image: url('../img/carousel/arrow_left.svg');
+    .prev {
+      background-image: url("../img/carousel/arrow_left.svg");
       background-repeat: no-repeat;
       background-color: transparent;
       border: none;
     }
-    .next{
-      background-image: url('../img/carousel/arrow_right.svg');
+    .next {
+      background-image: url("../img/carousel/arrow_right.svg");
       background-repeat: no-repeat;
       background-color: transparent;
       border: none;
@@ -607,25 +599,25 @@ $viewer-distance: 5000px;
   }
 }
 
-// Equipe bar
+// Team grid
 .tabs {
   position: absolute;
-  left: 400px;
+  left: 600px;
   float: right;
   text-decoration: none;
   display: flex;
   align-items: center;
   flex-direction: column;
-// font
+  // font
   font-family: Montserrat;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  width: 100%;
+  width: 80%;
   min-height: 100vh;
-  
 }
+
 
 .sidebar {
   display: flex;
@@ -649,8 +641,8 @@ $viewer-distance: 5000px;
 }
 
 .tab-btn-active {
-  border-bottom: 2px solid #FFFFFF;
-  color: #FFFFFF;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -659,7 +651,7 @@ $viewer-distance: 5000px;
 .content {
   width: 100%;
   position: relative;
-  top: 2rem; 
+  top: 2rem;
 }
 
 .tab-content {
@@ -673,16 +665,76 @@ $viewer-distance: 5000px;
   position: absolute;
   top: 1rem;
   display: none;
-}
+  img {
+    width: 350px;
+  }
+  button {
+    // background: transparent url("../img/send.svg");
+    
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
 
+    &:hover {
+      opacity: 0.2;
+      color: #ffffff;
+    }
+  } 
+}
 .tab-content-active {
   display: block;
 }
 
-.tab-content img {
-  width: 350px;
+.tab-content {
+  textarea {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    width: 430px;
+    height: 100px;
+    background: transparent;
+    color: #ffffff;
+    opacity: 0.8;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #ffffff;
+  }
+  input {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    background: transparent;
+    color: #ffffff;
+    width: 430px;
+    height: 50px;
+    opacity: 0.8;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #ffffff;
+  }
+  input:focus {
+    border-color: #6a82ad;
+    transition: 0.4s;
+  }
 }
-
+.tab-content textarea:focus {
+  border-color: #6a82ad;
+  transition: 0.4s;
+}
+.tab-content textarea::placeholder {
+  color: #ffffff;
+  font-size: 18px;
+}
 
 // Equipe
 .grid_group {
@@ -692,7 +744,7 @@ $viewer-distance: 5000px;
   grid-template-rows: repeat(2, 145px);
   grid-column-gap: 100px;
   grid-row-gap: 100px;
-  
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -702,17 +754,179 @@ $viewer-distance: 5000px;
   height: 100vh;
   position: absolute;
   top: 87px;
-  
-  img{width:150px;}
-  
-  .socials img{
+
+  img {
+    width: 150px;
+  }
+
+  .socials img {
     width: 76.5px;
     height: 80px;
   }
 }
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div3 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+// .loading{
+//   // width: 100%;
+//   // height: 100%;
+//   background: 100% 100% #6a82ad;
+//   // background-color: #6a82ad;
+//   position: absolute;
+//   top: 50%;
+// }
+@media only screen and (min-width: 768px) {
+  .grid_group{
+    top: 100px;
+    padding: 0;
+  }
   
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 2 / 1 / 3 / 2; }
-  .div3 { grid-area: 1 / 2 / 2 / 3; }
-  .div4 { grid-area: 2 / 2 / 3 / 3; }
- 
+body {
+  
+  background: url('../img/BGFull.svg') 50% 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+}
+.btn {
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
+
+  &:hover {
+    opacity: 0.2;
+    color: #ffffff;
+  }
+}
+
+
+
+
+// gird second
+
+
+.grid_Second {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 400px;
+grid-row-gap: 20px;
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; 
+
+  .carousel {
+    top:-550px;
+    position: absolute;
+    
+    // float: left;
+    display: flex;
+    flex-direction: row;
+    // margin-left: 300px;
+    justify-content: space-between;
+    // padding: 100px;
+    width: auto;
+    height: 600px;
+    perspective: $viewer-distance; //muito importante
+    overflow: hidden;
+    // align-items: center;
+  
+    figure {
+      margin: 0;
+      width: $item-width;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+  
+      img {
+        width: 100%;
+        padding: 0 ($item-separation, 2);
+        &:not(:first-of-type) {
+          position: absolute;
+          // margin-left: -100px;
+          // margin-right: 200px;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  .nevsecond{
+    left:300px;
+  }
+    nav {
+      position: absolute;
+      display: flex;
+      top: 450px;
+      left: 100px;
+  
+      button {
+        // margin-top:400px;
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+        color: transparent;
+        letter-spacing: 1px;
+        padding: 40px 40px;
+        border: none;
+      }
+      .prev {
+        background-image: url("../img/carousel/arrow_left.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+      .next {
+        background-image: url("../img/carousel/arrow_right.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .container_left .UX {
+    font: normal normal normal 70px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
+  .megafooter {
+    top: 300px;
+  }
+  .footer{
+    top:-200px;
+  }
+}
+@media only screen and (max-width: 508px) {
+  .container_left .UX {
+    font: normal normal normal 60px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
+}
