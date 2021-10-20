@@ -198,7 +198,7 @@ a {
 
     margin-top: 30px;
     text-align: left;
-    font: $UX;
+    font: normal normal normal 90px/110px Fredericka the Great;
     letter-spacing: 1px;
     color: #ffffff;
     opacity: 1;
@@ -908,4 +908,25 @@ grid-row-gap: 20px;
     }
   }
 }
+}
+
+@media only screen and (max-width: 768px) {
+  .container_left .UX {
+    font: normal normal normal 70px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
+  .megafooter {
+    top: 300px;
+  }
+  .footer{
+    top:-200px;
+  }
+}
+@media only screen and (max-width: 508px) {
+  .container_left .UX {
+    font: normal normal normal 60px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
 }

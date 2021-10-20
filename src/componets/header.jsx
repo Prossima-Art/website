@@ -37,7 +37,7 @@ window.onload = function () {
 
 <header className="header">
         <nav className="navbar">
-            <a href="#home" className="nav-logo"></a>
+            {/* <a href="#home" className="nav-logo"></a> */}
             <ul className="nav-menu">
                 <li className="nav-item">
                     <a href="#home" className="nav-link">INICIO</a>
