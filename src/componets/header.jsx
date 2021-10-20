@@ -1,6 +1,5 @@
 import React from 'react';
-import Lottie from 'react-lottie';
-import Logo from '../componets/logo.json';
+
 
 //   import { Link } from 'react-router';
 window.onload = function () {
@@ -22,22 +21,15 @@ window.onload = function () {
       navMenu.classList.remove("active");
    }
 }
+
    export default class Nav extends React.Component {
-    render() {    
-
-
-
-  const Logo_animation = {
-    loop: false,
-    autoplay: true, 
-    animationData: Logo,
-  };
+    render() { 
 
       return (
 
 <header className="header">
         <nav className="navbar">
-            <a href="#carousel" className="nav-logo"></a>
+            <a href="#carousel" className="nav-logo"></a> 
             <ul className="nav-menu">
                 <li className="nav-item">
                     <a href="#carousel" className="nav-link">INICIO</a>
@@ -66,12 +58,9 @@ window.onload = function () {
                 <span className="bar"></span>
             </div>
         </nav>
-        <Lottie options={Logo_animation}
-                height={520}
-                width={530}
-                style={{ left:"0", right:"0" }}
-                />
+        
 </header>
+
 
          );
     }

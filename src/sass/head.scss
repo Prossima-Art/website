@@ -4,7 +4,9 @@
 
 
 .header{ 
-  
+  position: fixed;
+  // top: 0;
+  right: 0;
   li {
     // list-style: none;
     align-items: center;
@@ -19,6 +21,8 @@
      color: #fff;
     }
 
+    .nologo { background-color:transparent; }
+    .logo { background:url('../img/logo/logo.png');}
     text-decoration: none;
     font: normal normal normal 36px/26px Grand Hotel;
     color: #FFFFFF;
@@ -66,15 +70,12 @@
 .nav-menu {
   
     display: flex;
-  
-    
     justify-content: space-between;
 
 
 &.nav-item {
   display: flex;
   align-items: flex-start;
-  
   margin-left: 1rem; //padding itens
 }
 }

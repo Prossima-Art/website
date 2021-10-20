@@ -1,10 +1,14 @@
 import React from 'react';
 import './sass/style.scss';
 import logo from "./img/logo/logo.png";
+import Lottie from 'react-lottie';
+import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Grid from './componets/Grid_section';
 import Nav from './componets/header';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init();
 
 function App() {
   window.addEventListener("load", () => {
@@ -96,6 +100,11 @@ function App() {
     setupTabs();
   })
 
+  const Logo_animation = {
+    loop: false,
+    autoplay: true, 
+    animationData: Logo,
+  };
   
   return (
     
@@ -103,6 +112,12 @@ function App() {
       
      <section id="pageA">
      <Nav />
+     <Lottie options={Logo_animation}
+                height={520}
+                width={530}
+                style={{ left:"0", right:"0" }}
+                />
+     
     </section>
     <section id="pageB">
 
@@ -141,8 +156,8 @@ function App() {
 
       {/* <Carousel/> */}
       
-      <div className="container " id="#suport">
-          <div className="UX"> UX/UI Design</div>
+      <div className="container"  id="#suport">
+          <div className="UX" data-aos="fade-right"> UX/UI Design</div>
           <p>
             UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
           </p>
@@ -154,7 +169,7 @@ function App() {
       <section id="pageC">
       <div className="grid_Second">
       <div className="container_left div1">
-            <div className="UX">3D,2D ilustrações</div>
+            <div className="UX" data-aos="fade-left">3D,2D ilustrações</div>
             <p>
               Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
             </p>
@@ -180,7 +195,8 @@ function App() {
         </div>
       </div>
       <Grid/>
-      <div className="megafooter">
+      <div className="megafooter" data-aos="fade-up"
+     data-aos-duration="3000">
 
         <nav className="foot_p">
           SOBRE 
