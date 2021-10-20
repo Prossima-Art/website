@@ -178,10 +178,6 @@ a {
     top: 80%;
   }
 }
-.flex_contanier{
-  display: flex;
-  flex-direction: row;
-}
 .container_left {
   margin-top: -500px;
   margin-left: 60px;
@@ -356,11 +352,12 @@ a {
   margin-left: 30px;
 
   // Carousel configuration parameters
-  $item-width: 20%; // we can use percentages!
+  $item-width: 50%; // we can use percentages!
   $item-separation: 0px; // This is set with Js
   $viewer-distance: 500px;
   // .carousel_3D {
-  
+  //   position: relative;
+  //   left: 250px;
   // }
   .carousel {
     
@@ -369,9 +366,8 @@ a {
     perspective: $viewer-distance;
     overflow: hidden;
     align-items: center;
-    
-    
-    
+    display: flex;
+    flex-direction: column;
 
     figure {
       margin: 0;
@@ -397,8 +393,11 @@ a {
       // margin-left:50px;
 
       button {
+        // position: absolute;
+
         width: 154.6px;
         height: 67.07px;
+        // left: 140.23px;
         cursor: pointer;
         color: transparent;
         letter-spacing: 1px;
@@ -823,4 +822,90 @@ body {
     opacity: 0.2;
     color: #ffffff;
   }
+}
+
+
+
+
+// gird second
+
+
+.grid_Second {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 400px;
+grid-row-gap: 20px;
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; 
+
+  .carousel {
+    top:-550px;
+    position: absolute;
+    
+    // float: left;
+    display: flex;
+    flex-direction: row;
+    // margin-left: 300px;
+    justify-content: space-between;
+    // padding: 100px;
+    width: auto;
+    height: 600px;
+    perspective: $viewer-distance; //muito importante
+    overflow: hidden;
+    // align-items: center;
+  
+    figure {
+      margin: 0;
+      width: $item-width;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+  
+      img {
+        width: 100%;
+        padding: 0 ($item-separation, 2);
+        &:not(:first-of-type) {
+          position: absolute;
+          // margin-left: -100px;
+          // margin-right: 200px;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  .nevsecond{
+    left:300px;
+  }
+    nav {
+      position: absolute;
+      display: flex;
+      top: 450px;
+      left: 100px;
+  
+      button {
+        // margin-top:400px;
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+        color: transparent;
+        letter-spacing: 1px;
+        padding: 40px 40px;
+        border: none;
+      }
+      .prev {
+        background-image: url("../img/carousel/arrow_left.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+      .next {
+        background-image: url("../img/carousel/arrow_right.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
 }

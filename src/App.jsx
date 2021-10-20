@@ -3,7 +3,8 @@ import './sass/style.scss';
 import logo from "./img/logo/logo.png";
 import carousel_1 from './img/slider_0.svg';
 import Grid from './componets/Grid_section';
-import Header from './componets/header';
+import Nav from './componets/header';
+
 
 function App() {
   window.addEventListener("load", () => {
@@ -101,7 +102,7 @@ function App() {
     <div className="App">
       
      <section id="pageA">
-     <Header/>
+     <Nav />
     </section>
     <section id="pageB">
 
@@ -124,7 +125,7 @@ function App() {
         <div className="waterfall_drops _9" />
         <div className="waterfall_drops _10"/>
       </div>
-      <div className="grid_carousel">
+      <div className="">
       <div className="carousel" id="carousel">
         <figure>
           <img src={carousel_1} alt="carousel" />
@@ -139,7 +140,8 @@ function App() {
       </div>
 
       {/* <Carousel/> */}
-      <div className="container" id="#suport">
+      
+      <div className="container " id="#suport">
           <div className="UX"> UX/UI Design</div>
           <p>
             UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
@@ -150,8 +152,8 @@ function App() {
         </div>
       </section>
       <section id="pageC">
-
-      <div className="container_left ">
+      <div className="grid_Second">
+      <div className="container_left div1">
             <div className="UX">3D,2D ilustrações</div>
             <p>
               Animações e ilustrações personalizadas  para humanizar o seu negocio em suas mídias sociais.
@@ -161,18 +163,21 @@ function App() {
       </div>
       
       <div>
-      <div className="carousel" id="carousel">
-        <figure>
-          <img src={carousel_1} alt="carousel" />
-          <img src={carousel_1} alt="carousel" />
-          <img src={carousel_1} alt="carousel" />
-        </figure>
-        
-        <nav>
-          <button className="nav prev"/>
-          <button className="nav next"/>
-        </nav>
-      </div>
+        <div className="div2">
+          <div className="carousel " id="carousel">
+            <figure>
+              <img src={carousel_1} alt="carousel" />
+              <img src={carousel_1} alt="carousel" />
+              <img src={carousel_1} alt="carousel" />
+            </figure>
+            
+            <nav className="nevsecond">
+              <button className="nav prev"/>
+              <button className="nav next"/>
+            </nav>
+          </div>
+        </div>
+        </div>
       </div>
       <Grid/>
       <div className="megafooter">
