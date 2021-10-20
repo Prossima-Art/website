@@ -2,9 +2,6 @@
 
 .carousel {
   top: 200px;
-  
-  
-
 
   .carousel-indicators{
     bottom: 50px;
@@ -33,5 +30,33 @@
     overflow: hidden;
   //   position: relative;
   //   text-align: center;
+  }
+}
+
+
+// 3D,2D section
+.Carousel_3D{
+  top: 200px;
+  .carousel-indicators{
+    bottom: 50px;
+  }
+  .carousel-control-next .carousel-control-prev{
+    margin-top: 200px;
+  }
+  .carousel-item {
+    text-align: center;
+    min-height: 280px;
+
+    img {
+      width: 20%;
+      position: inherit;
+      // margin-right: 680px;
+      text-align: center;
+      min-height: 280px;
+    }
+  }
+
+  hr {
+    overflow: hidden;
   }
 }

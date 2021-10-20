@@ -1,55 +1,78 @@
-import React from 'react'
-import '../sass/bootstrap.min.css';
-import '../sass/head.scss';
-import '../sass/style.scss';
+import React from 'react';
 import Lottie from 'react-lottie';
 import Logo from '../componets/logo.json';
-// import image_slider0 from '../img/image_slider0';
-// import image_slider1 from '../img/image_slider1';
-// import image_slider2 from '../img/image_slider2';
-// import slider_0 from '../img/slider_0.svg';
+
+//   import { Link } from 'react-router';
+window.onload = function () {
+   const hamburger = document.querySelector(".hamburger");
+   const navMenu = document.querySelector(".nav-menu");
+
+   hamburger.addEventListener("click", mobileMenu);
+
+   function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+   }
+   const navLink = document.querySelectorAll(".nav-link");
+
+   navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+   function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+   }
+}
+   export default class Nav extends React.Component {
+    render() {    
 
 
-class Header extends React.Component {
-      render(){
 
   const Logo_animation = {
     loop: false,
     autoplay: true, 
     animationData: Logo,
   };
-          return(
-            <>
 
-            <div className="topnav">
-                <div className="topnav-right row">
-                <a className="active" href="#home">
-                    INICIO
-                </a>
+      return (
+
+<header className="header">
+        <nav className="navbar">
+            {/* <a href="#home" className="nav-logo"></a> */}
+            <ul className="nav-menu">
+                <li className="nav-item">
+                    <a href="#home" className="nav-link">INICIO</a>
+                </li>
+                <li className="nav-item">
                 <a href="#carousel">
-                    PERSONALISE{" "}
-                    <em className="subtopnav">
-                    Sua imagem!
-                    </em>
-                </a>
+            PERSONALISE{" "}
+            <p className="subtopnav">
+            Sua&nbsp;imagem!
+            </p>
+            </a>                </li>
+                <li className="nav-item">
                 <a href="#pageC">
-                    ANIME{" "}
-                    <em className="subtopnav">
-                    {" "}
-                    <br /> Suas ideias!
-                    </em>
-                </a>
+            ANIME
+            <p className="subtopnav">
+             Suas&nbsp;ideias!
+            </p>
+            </a>                </li>
+                <li className="nav-item">
                 <a href="#contact">CONTATO</a>
-                </div>
+                </li>
+            </ul>
+            <div className="hamburger">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
             </div>
-
-             <Lottie options={Logo_animation}
-                height={720}
-                width={720}
-                style={{ position: "absolute" }}
+        </nav>
+        <Lottie options={Logo_animation}
+                height={520}
+                width={530}
+                style={{ left:"0", right:"0" }}
                 />
-            </>
-          )
-      }
-}
-export default Header
+</header>
+
+         );
+    }
+  }

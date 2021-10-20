@@ -1,19 +1,15 @@
 import React from 'react'
-
 import '../sass/style.scss';
 import '../sass/style_mobile.scss';
 
-
+// right_grid
 import Lottie from 'react-lottie';
 import pig from '../img/pig.json';
 import btc from '../img/BTC.json';
 import cart from '../img/cart.json';
 import card from '../img/creditcard.json';
-// import Logo from '../componets/logo.json';
-// import carousel_1 from './img/slider_0.svg';
-// import carousel_2 from './img/slider_0.svg';
 
-// right_bar
+// left_grid
 import Group_1 from '../img/Group_1.svg'
 import Group_2 from '../img/Group_2.svg'
 import Group_3 from '../img/Group_3.svg'
@@ -121,36 +117,37 @@ const animaton_pig = {
                     {/* tabs content  */}
                     <div className="content">
                         <div className="tab-content tab-content-active" data-tab={1}>
-                        <div class="grid_group ">
-                            <div class="div1"> <img src={Group_1} alt="Equipe" /></div>
-                            <div class="div2"> <img src={Group_2} alt="Equipe" /></div>
-                            <div class="div3"> <img src={Group_3} alt="Equipe" /></div>
-                            <div class="div4"> <img src={Group_4} alt="Equipe" /></div>
+                        <div className="grid_group ">
+                            <div className="div1"> <img src={Group_1} alt="Equipe" /></div>
+                            <div className="div2"> <img src={Group_2} alt="Equipe" /></div>
+                            <div className="div3"> <img src={Group_3} alt="Equipe" /></div>
+                            <div className="div4"> <img src={Group_4} alt="Equipe" /></div>
                         </div>
                         </div>
                         <div className="tab-content" data-tab={2}>
                         <form name="contact" method="POST" data-netlify="true">
-                          <p>
+                          <div>
                           <label><textarea required name="message" placeholder="Digite sua messagem"></textarea></label> 
-                          <p/>
-                          </p>
-                          <p>
+                          </div>
+                          
+                          <div>
                             <label><input  required type="text" name="name" placeholder="Seu nome" /></label>   
-                          </p>
-                          <p>
-                            <label><input required type="email" name="email" placeholder="Seu E-mail"/></label>
-                          </p>
-                          <p>
-                            <button type="submit"></button>
-                          </p>
+                            </div>
+                          
+                          <div>
+                            <label><input required type="email"  name="email" placeholder="Seu E-mail"/></label>
+                            </div>
+                          
+                            <button type="submit" className="btn">Enviar</button>
+                          
                         </form>
                         </div>
                         <div className="tab-content" data-tab={3}>
-                        <div class="grid_group">
-                            <div class="div1 socials" > <a href="https://www.linkedin.com/in/alannelucena?originalSubdomain=br"> <img src={Linkedin} alt="Linkedin" /> </a> </div> 
-                            <div class="div2 socials" > <img src={Mail} alt="Mail" /></div> 
-                            <div class="div3 socials" > <a href="https://www.instagram.com/laneartdesign/?hl=en"> <img src={Instagram} alt="Instagram" /></a></div> 
-                            <div class="div4 socials"><a href="https://github.com/Lane-Art-Design"> <img src={Github} alt="Github" /></a></div> 
+                        <div className="grid_group">
+                            <div className="div1 socials" > <a href="https://www.linkedin.com/in/alannelucena?originalSubdomain=br"> <img src={Linkedin} alt="Linkedin" /> </a> </div> 
+                            <div className="div2 socials" > <img src={Mail} alt="Mail" /></div> 
+                            <div className="div3 socials" > <a href="https://www.instagram.com/laneartdesign/?hl=en"> <img src={Instagram} alt="Instagram" /></a></div> 
+                            <div className="div4 socials"><a href="https://github.com/Lane-Art-Design"> <img src={Github} alt="Github" /></a></div> 
                         </div>  
                         </div>
                     </div>

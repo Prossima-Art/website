@@ -198,7 +198,7 @@ a {
 
     margin-top: 30px;
     text-align: left;
-    font: $UX;
+    font: normal normal normal 90px/110px Fredericka the Great;
     letter-spacing: 1px;
     color: #ffffff;
     opacity: 1;
@@ -239,8 +239,8 @@ a {
 
 .container {
   position: relative;
-  left: 650px;
-  top: -405px;
+  left: 720px;
+  top:-550px;
   float: right;
 
   p {
@@ -298,8 +298,8 @@ a {
 .Container_orcamento {
   // max-width: 300px;
   position: absolute;
-  margin-top: -300px;
-  margin-left: 225px;
+  margin-top: -430px;
+  margin-left: 125px;
 
   .btn_m1 {
     margin-top: 0.7em;
@@ -352,12 +352,15 @@ a {
   margin-left: 30px;
 
   // Carousel configuration parameters
-  $item-width: 50%; // Now we can use percentages!
-  $item-separation: 0px; // This now is set with Js
+  $item-width: 50%; // we can use percentages!
+  $item-separation: 0px; // This is set with Js
   $viewer-distance: 500px;
-
+  // .carousel_3D {
+  //   position: relative;
+  //   left: 250px;
+  // }
   .carousel {
-    float: left;
+    
     padding: 20px;
     // width: 100%;
     perspective: $viewer-distance;
@@ -416,6 +419,7 @@ a {
       }
     }
   }
+  
   .flexbox {
     width: 600px;
     float: left;
@@ -534,12 +538,13 @@ $viewer-distance: 5000px;
 .carousel {
   float: left;
   display: flex;
-  position: relative;
+  position: absolute;
   flex-direction: row;
   // margin-left: 300px;
   justify-content: space-between;
   // padding: 100px;
   width: auto;
+  height: 600px;
   perspective: $viewer-distance; //muito importante
   overflow: hidden;
   // align-items: center;
@@ -566,7 +571,8 @@ $viewer-distance: 5000px;
   nav {
     position: absolute;
     display: flex;
-    top: 400px;
+    top: 450px;
+    left: 100px;
 
     button {
       // margin-top:400px;
@@ -611,6 +617,7 @@ $viewer-distance: 5000px;
   width: 80%;
   min-height: 100vh;
 }
+
 
 .sidebar {
   display: flex;
@@ -662,15 +669,25 @@ $viewer-distance: 5000px;
     width: 350px;
   }
   button {
-    background: transparent url("../img/send.svg");
-    height: 45px;
-    width: 50px;
-    left: 450.3497314453125px;
-    top: 421.36126708984375px;
-    top: 20px;
-    cursor: pointer;
-    border: none;
-  }
+    // background: transparent url("../img/send.svg");
+    
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
+
+    &:hover {
+      opacity: 0.2;
+      color: #ffffff;
+    }
+  } 
 }
 .tab-content-active {
   display: block;
@@ -707,6 +724,7 @@ $viewer-distance: 5000px;
   }
   input:focus {
     border-color: #6a82ad;
+    transition: 0.4s;
   }
 }
 .tab-content textarea:focus {
@@ -768,3 +786,147 @@ $viewer-distance: 5000px;
 //   position: absolute;
 //   top: 50%;
 // }
+@media only screen and (min-width: 768px) {
+  .grid_group{
+    top: 100px;
+    padding: 0;
+  }
+  
+body {
+  
+  background: url('../img/BGFull.svg') 50% 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+}
+.btn {
+  background: #90a6fc 0% 0% no-repeat padding-box;
+  font: normal normal normal 18px/20px Montserrat;
+  // padding: 8px 20px 10px 20px;
+  color: #ffffff;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 31px;
+  width: 210px;
+  height: 55px;
+  opacity: 1;
+  transition-duration: 0.4s;
+
+  &:hover {
+    opacity: 0.2;
+    color: #ffffff;
+  }
+}
+
+
+
+
+// gird second
+
+
+.grid_Second {
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 400px;
+grid-row-gap: 20px;
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; 
+
+  .carousel {
+    top:-550px;
+    position: absolute;
+    
+    // float: left;
+    display: flex;
+    flex-direction: row;
+    // margin-left: 300px;
+    justify-content: space-between;
+    // padding: 100px;
+    width: auto;
+    height: 600px;
+    perspective: $viewer-distance; //muito importante
+    overflow: hidden;
+    // align-items: center;
+  
+    figure {
+      margin: 0;
+      width: $item-width;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+  
+      img {
+        width: 100%;
+        padding: 0 ($item-separation, 2);
+        &:not(:first-of-type) {
+          position: absolute;
+          // margin-left: -100px;
+          // margin-right: 200px;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  .nevsecond{
+    left:300px;
+  }
+    nav {
+      position: absolute;
+      display: flex;
+      top: 450px;
+      left: 100px;
+  
+      button {
+        // margin-top:400px;
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+        color: transparent;
+        letter-spacing: 1px;
+        padding: 40px 40px;
+        border: none;
+      }
+      .prev {
+        background-image: url("../img/carousel/arrow_left.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+      .next {
+        background-image: url("../img/carousel/arrow_right.svg");
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .container_left .UX {
+    font: normal normal normal 70px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
+  .megafooter {
+    top: 300px;
+  }
+  .footer{
+    top:-200px;
+  }
+}
+@media only screen and (max-width: 508px) {
+  .container_left .UX {
+    font: normal normal normal 60px/26px Fredericka the Great;
+    line-height: 80px;
+    width: 126px;
+  } 
+}
