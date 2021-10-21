@@ -4,6 +4,7 @@ import logo from "./img/logo/logo.png";
 import Lottie from 'react-lottie';
 import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
+import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
 import Nav from './componets/header';
 import AOS from 'aos';
@@ -181,9 +182,9 @@ function App() {
         <div className="div2">
           <div className="carousel " id="carousel">
             <figure>
-              <img src={carousel_1} alt="carousel" />
-              <img src={carousel_1} alt="carousel" />
-              <img src={carousel_1} alt="carousel" />
+              <img src={Cube} alt="Cube 3D" />
+              <img src={Cube} alt="carousel" />
+              <img src={Cube} alt="carousel" />
             </figure>
             
             <nav className="nevsecond">

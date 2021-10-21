@@ -1,4 +1,5 @@
 import React from 'react';
+// import logo from "../img/logo/logo.png";
 
 
 //   import { Link } from 'react-router';
@@ -21,15 +22,15 @@ window.onload = function () {
       navMenu.classList.remove("active");
    }
 }
-
    export default class Nav extends React.Component {
     render() { 
 
       return (
 
 <header className="header">
-        <nav className="navbar">
-            <a href="#carousel" className="nav-logo"></a> 
+        <nav className="navbar navbar-fixed-top">
+            <a href="#pageA" className="nav-logo"></a> 
+            {/* <img id="myImage" src={logo}/> */}
             <ul className="nav-menu">
                 <li className="nav-item">
                     <a href="#carousel" className="nav-link">INICIO</a>

@@ -2,14 +2,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-
+.header > .navbar > nav {
+  z-index: index 1001;
+}
 .header{ 
   position: fixed;
-  // top: 0;
+  z-index: 1001;
+
+
+  // background-color: #6a82ad;
+  // overflow: hidden;
   right: 0;
+  .navbar-fixed-top {
+    z-index: 4;// para que o menu se sobreponha aos containers
+
+  }
   li {
     // list-style: none;
     align-items: center;
+    
     padding: .05rem .05rem;
   }
   a {
@@ -20,15 +31,13 @@
      opacity: .8;
      color: #fff;
     }
-
-    .nologo { background-color:transparent; }
-    .logo { background:url('../img/logo/logo.png');}
     text-decoration: none;
     font: normal normal normal 36px/26px Grand Hotel;
     color: #FFFFFF;
     padding: 22px 32px;
     max-width: 400px;
   }
+ 
 }
 .navbar {
   margin-left: -20px;

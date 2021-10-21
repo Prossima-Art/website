@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@300;700&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 @import "./variables.scss";
@@ -45,9 +47,11 @@ p {
 }
 
 section {
+  z-index: 1;
   width: 100%;
   height: 1000px;
   float: left;
+
 }
 
 a {
@@ -73,6 +77,8 @@ a {
 }
 
 .waterfall {
+  z-index: 1;
+
   width: 50rem;
   height: 1900px;
   align-items: center;
@@ -179,6 +185,7 @@ a {
   }
 }
 .container_left {
+  z-index: 1;
   margin-top: -500px;
   margin-left: 60px;
   float: left;
@@ -192,10 +199,10 @@ a {
   }
 
   .UX {
+    position: relative;
     // max-width: 200px;
     width: 116px;
     height: 220px;
-
     margin-top: 30px;
     text-align: left;
     font: normal normal normal 90px/110px Fredericka the Great;
@@ -205,6 +212,8 @@ a {
   }
 
   .btn {
+    z-index: -1;
+    position: relative;
     background: #90a6fc 0% 0% no-repeat padding-box;
     font: normal normal normal 18px/20px Montserrat;
     // padding: 8px 20px 10px 20px;
@@ -238,6 +247,7 @@ a {
 }
 
 .container {
+  z-index: 1;
   position: relative;
   left: 720px;
   top:-550px;
@@ -252,6 +262,7 @@ a {
   }
 
   .UX {
+    position: relative;
     // max-width: 200px;
     width: 116px;
     height: 220px;
@@ -297,7 +308,8 @@ a {
 }
 .Container_orcamento {
   // max-width: 300px;
-  position: absolute;
+  // position: absolute;
+  z-index: 1;
   margin-top: -430px;
   margin-left: 125px;
 
@@ -350,7 +362,7 @@ a {
 
 .container_grid {
   margin-left: 30px;
-
+  z-index: 1;
   // Carousel configuration parameters
   $item-width: 50%; // we can use percentages!
   $item-separation: 0px; // This is set with Js
@@ -370,6 +382,7 @@ a {
     flex-direction: column;
 
     figure {
+      z-index: -1;
       margin: 0;
       width: $item-width;
       transform-style: preserve-3d;
@@ -421,6 +434,7 @@ a {
   }
   
   .flexbox {
+    z-index: 1;
     width: 600px;
     float: left;
     display: flex;
@@ -481,6 +495,7 @@ a {
 /* end grid */
 
 .megafooter {
+  z-index: 1;
   margin-top: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -510,6 +525,7 @@ a {
 /* footer :) */
 
 #footer {
+  z-index: 1;
   font: normal normal normal 12px/32px Montserrat;
   background-color: transparent;
   display: flex;
@@ -536,13 +552,12 @@ $item-separation: 30px;
 $viewer-distance: 5000px;
 
 .carousel {
+  z-index: 1;
   float: left;
   display: flex;
-  position: absolute;
   flex-direction: row;
-  // margin-left: 300px;
+  z-index: -1;
   justify-content: space-between;
-  // padding: 100px;
   width: auto;
   height: 600px;
   perspective: $viewer-distance; //muito importante
@@ -550,6 +565,7 @@ $viewer-distance: 5000px;
   // align-items: center;
 
   figure {
+    z-index: -1;
     margin: 0;
     width: $item-width;
     transform-style: preserve-3d;
@@ -601,6 +617,7 @@ $viewer-distance: 5000px;
 
 // Team grid
 .tabs {
+  z-index: 1;
   position: absolute;
   left: 600px;
   float: right;
@@ -620,6 +637,7 @@ $viewer-distance: 5000px;
 
 
 .sidebar {
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,6 +645,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-btn {
+  z-index: 1;
   background-color: transparent;
   border: none;
   color: $primary_color;
@@ -641,6 +660,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-btn-active {
+  z-index: 1;
   border-bottom: 2px solid #ffffff;
   color: #ffffff;
   font-weight: bold;
@@ -649,12 +669,14 @@ $viewer-distance: 5000px;
 /* tabs content */
 
 .content {
+  z-index: 1;
   width: 100%;
   position: relative;
   top: 2rem;
 }
 
 .tab-content {
+  z-index: 1;
   display: grid;
   flex-direction: column;
   align-items: center;
@@ -667,6 +689,7 @@ $viewer-distance: 5000px;
   display: none;
   img {
     width: 350px;
+    z-index: -1;
   }
   button {
     // background: transparent url("../img/send.svg");
@@ -694,6 +717,7 @@ $viewer-distance: 5000px;
 }
 
 .tab-content {
+  z-index: 1;
   textarea {
     font-family: Montserrat;
     font-style: normal;
@@ -738,6 +762,7 @@ $viewer-distance: 5000px;
 
 // Equipe
 .grid_group {
+  z-index: 1;
   display: grid;
   float: right;
   grid-template-columns: repeat(2, 191px);
@@ -806,6 +831,7 @@ body {
 
 }
 .btn {
+  z-index: 1;
   background: #90a6fc 0% 0% no-repeat padding-box;
   font: normal normal normal 18px/20px Montserrat;
   // padding: 8px 20px 10px 20px;
@@ -857,6 +883,8 @@ grid-row-gap: 20px;
     // align-items: center;
   
     figure {
+      z-index: -1;
+      position: relative;
       margin: 0;
       width: $item-width;
       transform-style: preserve-3d;
@@ -866,7 +894,7 @@ grid-row-gap: 20px;
         width: 100%;
         padding: 0 ($item-separation, 2);
         &:not(:first-of-type) {
-          position: absolute;
+          
           // margin-left: -100px;
           // margin-right: 200px;
           left: 0;
@@ -911,6 +939,7 @@ grid-row-gap: 20px;
 }
 
 @media only screen and (max-width: 768px) {
+  
   .container_left .UX {
     font: normal normal normal 70px/26px Fredericka the Great;
     line-height: 80px;
@@ -922,6 +951,18 @@ grid-row-gap: 20px;
   .footer{
     top:-100px;
   }
+  .tabs {
+    display: none;
+  }
+  
+}
+@media only screen and (max-width: 980px) {
+    .grid_Second figure{
+      display: none;
+    }
+    #suport {
+      display: none;
+    }
 }
 @media only screen and (max-width: 508px) {
   .container_left .UX {
