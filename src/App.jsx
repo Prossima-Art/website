@@ -112,7 +112,7 @@ function App() {
     <div className="App">
       
      <section id="pageA">
-     <Nav />
+     
      <Lottie options={Logo_animation}
                 height={520}
                 width={530}
@@ -180,7 +180,7 @@ function App() {
       
       <div>
         <div className="div2">
-          <div className="carousel " id="carousel">
+          <div className="carousel" id="carousel">
             <figure>
               <img src={Cube} alt="Cube 3D" />
               <img src={Cube} alt="carousel" />
@@ -212,7 +212,7 @@ function App() {
       <div id="footer">
       
         <div>
-          <a href="#suport">Suport</a>
+          <a href="#suport">Suport</a> 
         </div>
         <div>
           <img
@@ -227,7 +227,7 @@ function App() {
         </div>
       </div>
     </section>
-
+    <Nav />
   </div>
   );
 }

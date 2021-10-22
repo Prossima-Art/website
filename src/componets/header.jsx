@@ -27,40 +27,40 @@ window.onload = function () {
 
       return (
 
-<header className="header">
-        <nav className="navbar navbar-fixed-top">
-            <a href="#pageA" className="nav-logo"></a> 
-            {/* <img id="myImage" src={logo}/> */}
-            <ul className="nav-menu">
-                <li className="nav-item">
-                    <a href="#carousel" className="nav-link">INICIO</a>
-                </li>
-                <li className="nav-item">
-                <a href="#carousel">
-            PERSONALISE{" "}
-            <p className="subtopnav">
-            Sua&nbsp;imagem!
-            </p>
-            </a>                </li>
-                <li className="nav-item">
-                <a href="#pageC">
-            ANIME
-            <p className="subtopnav">
-             Suas&nbsp;ideias!
-            </p>
-            </a>                </li>
-                <li className="nav-item">
-                <a href="#contact">CONTATO</a>
-                </li>
-            </ul>
-            <div className="hamburger">
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-            </div>
-        </nav>
-        
-</header>
+            <header className="header" id="#nav">
+                    <nav className="navbar navbar-fixed-top">
+                        <a href="#pageC" className="nav-logo"></a> 
+                        {/* <img id="myImage" src={logo}/> */}
+                        <ul className="nav-menu">
+                            <li className="nav-item">
+                                <a href="#carousel" className="nav-link">INICIO</a>
+                            </li>
+                            <li className="nav-item">
+                            <a href="#carousel">
+                        PERSONALISE{" "}
+                        <p className="subtopnav">
+                        Sua&nbsp;imagem!
+                        </p>
+                        </a>                </li>
+                            <li className="nav-item">
+                            <a href="#pageC">
+                        ANIME
+                        <p className="subtopnav">
+                        Suas&nbsp;ideias!
+                        </p>
+                        </a>                </li>
+                            <li className="nav-item">
+                            <a href="#contact">CONTATO</a>
+                            </li>
+                        </ul>
+                        <div className="hamburger">
+                            <span className="bar"></span>
+                            <span className="bar"></span>
+                            <span className="bar"></span>
+                        </div>
+                    </nav>
+                    
+            </header>
 
 
          );
