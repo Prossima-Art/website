@@ -9,11 +9,20 @@
 @import "./head.scss";
 @import "./linkswap.sass";
 
+html {
+  
+  background: $bg_full no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
 body {
-  background: $bg_full;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -1113,6 +1122,7 @@ body {
     line-height: 80px;
     width: 126px;
   } 
+  
   
   #suport {
     // left: -400px;
