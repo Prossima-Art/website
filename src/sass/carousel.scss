@@ -1,31 +1,66 @@
-@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
+// @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
 
 .carousel {
-  margin-top: 200px;
+  top: 200px;
 
-}
-.carousel-indicators{
-  bottom: -50px;
-}
-.carousel-item {
-  text-align: center;
-  min-height: 280px;
-
-  /* Prevent carousel from being distorted if for some reason image doesn't load */
-
-  img {
-    width: 30%;
-    position: inherit;
-    margin-right: 680px;
+  .carousel-indicators{
+    bottom: 50px;
+  }
+  .carousel-control-next .carousel-control-prev{
+    margin-top: 200px;
+  }
+  .carousel-item {
     text-align: center;
     min-height: 280px;
 
     /* Prevent carousel from being distorted if for some reason image doesn't load */
+
+    img {
+      width: 20%;
+      position: inherit;
+      // margin-right: 680px;
+      text-align: center;
+      min-height: 280px;
+
+      /* Prevent carousel from being distorted if for some reason image doesn't load */
+    }
+  }
+
+  hr {
+    overflow: hidden;
+  //   position: relative;
+  //   text-align: center;
   }
 }
 
-// hr {
-//   overflow: hidden;
-//   position: relative;
-//   text-align: center;
-// }
+
+// 3D,2D section
+.Carousel_3D{
+  z-index: 1;
+  position:relative;
+  top: 200px;
+  .carousel-indicators{
+    bottom: 50px;
+  }
+  .carousel-control-next .carousel-control-prev{
+    margin-top: 200px;
+  }
+  .carousel-item {
+    text-align: center;
+    min-height: 280px;
+
+    img {
+      width: 20%;
+      position: inherit;
+      // margin-right: 680px;
+      text-align: center;
+      min-height: 280px;
+    }
+  }
+
+  hr {
+    overflow: hidden;
+  }
+}
+
+// page 404 error

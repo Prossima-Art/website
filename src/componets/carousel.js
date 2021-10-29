@@ -12,32 +12,24 @@ class Carousel extends React.Component {
       render(){
           return(
             
-            <div className="container-fluid">
+            <div className="container">
   <div id="myCarousel" className="carousel slide" data-ride="carousel">
     {/* Carousel indicators */}
-    <ol className="carousel-indicators my-4" >
+    {/* <ol className="carousel-indicators my-4" >
       <li data-target="#myCarousel" data-slide-to={0} className="active" />
       <li data-target="#myCarousel" data-slide-to={1} />
       <li data-target="#myCarousel" data-slide-to={2} />
-    </ol>
+    </ol> */}
     {/* Wrapper for carousel items */}
     <div className="carousel-inner">
       <div className="carousel-item active">
         <img src={slider_0} alt="First Slide" />
      
-        <div className="container">
-          <div className="UX"> UX/UI Design</div>
-          <p>
-            UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
-          </p>
-          <button className="btn"> Veja Mais</button>
-          <button className="btn-or"> Orçamento</button>
-        </div>
       </div>
       <div className="carousel-item">
         <img src={image_slider2} alt="First Slide" />
   
-        <div className="container">
+        {/* <div className="container">
           <div className="UX"> 3D Design</div>
           <p>
             Animações personalizadas e modelagem para humanizar o seu negocio em
@@ -45,17 +37,17 @@ class Carousel extends React.Component {
           </p>
           <button className="btn"> Veja Mais</button>
           <button className="btn-or"> Orçamento</button>
-        </div>
+        </div> */}
       </div>
       <div className="carousel-item">
         <img src={image_slider0} alt="First Slide" />
     
-        <div className="container">
+        {/* <div className="container">
           <div className="UX"> Ilustrations</div>
           <p>Ilustrações para qualquer tipo de projeto com originalidade</p>
           <button className="btn"> Veja Mais</button>
           <button className="btn-or"> Orçamento</button>
-        </div>
+        </div> */}
       </div>
       {/* Carousel controls */}
       <a className="carousel-control-prev" href="#myCarousel" data-slide="prev">
