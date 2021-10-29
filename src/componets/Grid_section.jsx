@@ -55,7 +55,8 @@ const animaton_pig = {
     }
   };
 
-    
+ 
+  
     class Grid extends React.Component {
         
           render(){
@@ -107,11 +108,11 @@ const animaton_pig = {
                     </div>
                     </div>
 
-                    <div className="tabs" id="contact">
+                    <div className="tabs">
                     <div className="sidebar">
                         {/* tabs buttons  */}
                         <button className="tab-btn tab-btn-active" data-for-tab={1}>EQUIPE</button>
-                        <button className="tab-btn" data-for-tab={2}>CONTATO</button>
+                        <button className="tab-btn" id="contact" data-for-tab={2}>CONTATO</button>
                         <button className="tab-btn" data-for-tab={3}>SOCIAL</button>
                     </div>
                     {/* tabs content  */}
