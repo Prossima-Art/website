@@ -17,11 +17,8 @@ body {
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-
   /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -45,6 +42,7 @@ body {
     background: #6a82ad;
   }
 }
+
 
 p {
   font: $font-14;
@@ -867,6 +865,41 @@ body {
 }
 
 
+.Error404 {
+  background: url('../img/404.png') no-repeat center center 100%;
+  z-index: 999;
+  & h1 {
+    position: absolute;
+    width: 239px;
+    height: 113px;
+    left: 841px;
+    top: 348px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 112px;
+    /* identical to box height */
+    color: #FFFFFF;
+  }
+  & p {
+    /* Não podemos encontar a página que você está procurando */
+    position: absolute;
+    width: 535.7px;
+    height: 84px;
+    left: 692.15px;
+    top: 512px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
 
 
 // gird second
@@ -1129,3 +1162,4 @@ body {
     position:absolute;
   }
 }
+
