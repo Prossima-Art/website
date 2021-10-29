@@ -1,18 +1,9 @@
 # Imagem de Origem
 #
 #
-#
-#
 # Lane art Design - DOcker file
 #
 # v. 1.0
-#
-#
-#
-#
-#
-# 
-#
 #
 
 FROM node:13-alpine
