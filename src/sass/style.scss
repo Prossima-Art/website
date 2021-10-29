@@ -534,7 +534,7 @@ a {
   justify-content: space-between;
 
   > div {
-    margin-top: 70px;
+    margin-top: 60px;
     width: 100px;
     height: 20px;
   }
@@ -955,9 +955,139 @@ body {
 
 @media only screen and (max-width: 768px) {
   
+
+// skeleton config 
+
+.skeleton:empty {
+  width: 315px;
+  height: 250px; 
+  cursor: progress; 
+  background: 
+  linear-gradient(0.25turn, transparent, #fff, transparent),
+  linear-gradient(#eee, #eee),
+  radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+  linear-gradient(#eee, #eee);
+  background-repeat: no-repeat;
+  animation: loading 1.5s infinite; // the animation transition 
+
+}
+
+@media only screen and (max-width: 980px) {
+
+
+  // #pageA, #pageB, #pageC {
+  //   width: 680px;
+  // }
+
+  .grid_Second .div2 .carousel {
+    width: 70%;
+    margin-top:-120px;
+    // top:-50px;
+    & nav {
+      margin-top: -0px;
+      margin-left: -50px;
+      
+      
+    }
+  }  
+  .carousel {
+    width: 70%;
+    height: 320px;
+    left: 100px;
+  
+    & nav{
+      margin-top:-200px;
+      margin-left: -90px;
+    }
+    & figure {
+      height: 220px;
+    }
+  }
+  .grid_Second {
+      position:absolute;
+      // margin-left:-100px;
+      top: 300px;
+      width: 100%;
+    }
+    // .container_left .UX {
+    //   top: 800px;
+    //   left:-100px;
+    // }
+    
+    .container_left {
+      display: none;
+    }
+
+.container {
+  z-index: 2;
+  position: relative;
+  left: 60px;
+  top:0px;
+  width: 120px;
+  height: 120px;
+  float: right;
+  
+  p {
+    font: normal normal normal 30px/37px Montserrat;
+    letter-spacing: 0px;
+    width: 330px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .UX {
+    // max-width: 200px;
+    width: 116px;
+    height: 220px;
+    margin-top: 30px;
+    text-align: right;
+    font: $UX;
+    letter-spacing: 1px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .btn {
+    background: #90a6fc 0% 0% no-repeat padding-box;
+    font: normal normal normal 18px/20px Montserrat;
+    // padding: 8px 20px 10px 20px;
+    color: #ffffff;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 31px;
+    width: 210px;
+    height: 55px;
+    opacity: 1;
+    transition-duration: 0.4s;
+
+    &:hover {
+      opacity: 0.2;
+      color: #ffffff;
+    }
+  }
+
+  .btn-or {
+    text-align: left;
+    text-decoration: underline;
+    background-color: transparent;
+    font: normal normal normal 16px/32px Montserrat;
+    border: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    letter-spacing: 0px;
+    margin-left: 30px;
+    opacity: 1;
+  }
+}
+
+    .flexbox {
+      margin-top:300px;
+      
+    }
   .container_left .UX {
     font: normal normal normal 70px/26px Fredericka the Great;
     line-height: 80px;
+    
     width: 126px;
   } 
   .megafooter {
@@ -970,16 +1100,12 @@ body {
   }
   .tabs {
     display: none;
-  }
-  
+  } 
 }
-@media only screen and (max-width: 980px) {
-    .grid_Second figure{
-      display: none;
-    }
-    #suport {
-      display: none;
-    }
+.carousel img{
+  width: 60%;
+}
+
 }
 @media only screen and (max-width: 508px) {
   .container_left .UX {
@@ -987,4 +1113,11 @@ body {
     line-height: 80px;
     width: 126px;
   } 
+  
+  #suport {
+    // left: -400px;
+    top: 600px;
+    left:-320px;
+    position:absolute;
+  }
 }

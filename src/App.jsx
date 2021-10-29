@@ -1,13 +1,15 @@
 import React from 'react';
 import './sass/style.scss';
-import logo from "./img/logo/logo.png";
-import Lottie from 'react-lottie';
+// import {i18n} from './translate/i18n'
+import logo from "./img/logo/logo.png"; 
+import Lottie from 'react-lottie'; // for our animations
 import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
 import Nav from './componets/header';
-import AOS from 'aos';
+import AOS from 'aos'; 
+
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
@@ -19,7 +21,7 @@ function App() {
     }
   });
   
-  function carousel(root) {
+  async function carousel(root) {
     var figure = root.querySelector("figure"),
       nav = root.querySelector("nav"),
       images = figure.children,
@@ -35,7 +37,7 @@ function App() {
   
     setupNavigation();
   
-    function setupCarousel(n, s) {
+    async function setupCarousel(n, s) {
       var apothem = s / (2 * Math.tan(Math.PI / n));
       figure.style.transformOrigin = `50% 50% ${-apothem}px`;
   
@@ -50,7 +52,7 @@ function App() {
       rotateCarousel(currImage);
     }
   
-    function setupNavigation() {
+    async function setupNavigation() {
       nav.addEventListener("click", onClick, true);
   
       function onClick(e) {
@@ -69,13 +71,13 @@ function App() {
       }
     }
   
-    function rotateCarousel(imageIndex) {
+    async function rotateCarousel(imageIndex) {
       figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
     }
   }
   // right_content grid
 
-  function setupTabs (){
+  async function setupTabs (){
     document.querySelectorAll('.tab-btn').forEach(button=>{
       button.addEventListener('click',()=>{
         
@@ -107,6 +109,7 @@ function App() {
     animationData: Logo,
   };
   
+  
   return (
     
     <div className="App">
@@ -120,52 +123,53 @@ function App() {
                 />
      
     </section>
-    <section id="pageB">
-
-    <div className="Container_orcamento">
-          <p className="paragraph_1">
-          Design Gráfico <br/>      
-          Para qualquer tipo de necessidade
-          </p>
-          <button className="btn_m1"> Orçamento </button>
-      </div>
-      <div className="waterfall">
-        <div className="waterfall_drops _1" />
-        <div className="waterfall_drops _2" />
-        <div className="waterfall_drops _3" />
-        <div className="waterfall_drops _4" />
-        <div className="waterfall_drops _5" />
-        <div className="waterfall_drops _6" />
-        <div className="waterfall_drops _7" />
-        <div className="waterfall_drops _8" />
-        <div className="waterfall_drops _9" />
-        <div className="waterfall_drops _10"/>
-      </div>
-      <div className="">
-      <div className="carousel" id="carousel">
-        <figure>
-          <img src={carousel_1} alt="carousel" />
-          <img src={carousel_1} alt="carousel" />
-          <img src={carousel_1} alt="carousel" />
-        </figure>
+      <section id="pageB">
+      <div className="Container_orcamento">
+            <p className="paragraph_1">
+            Design Gráfico <br/>      
+            
+            Para qualquer tipo de necessidade
+            </p>
+            <button className="btn_m1"> Orçamento </button>
+        </div>
+        <div className="waterfall">
+          <div className="waterfall_drops _1" />
+          <div className="waterfall_drops _2" />
+          <div className="waterfall_drops _3" />
+          <div className="waterfall_drops _4" />
+          <div className="waterfall_drops _5" />
+          <div className="waterfall_drops _6" />
+          <div className="waterfall_drops _7" />
+          <div className="waterfall_drops _8" />
+          <div className="waterfall_drops _9" />
+          <div className="waterfall_drops _10"/>
+        </div>
         
-        <nav>
-          <button className="nav prev"/>
-          <button className="nav next"/>
-        </nav>
-      </div>
+        <div className="carousel " id="carousel">
+          <figure>
+            <img src={carousel_1} alt="carousel" />
+            <img src={carousel_1} alt="carousel" />
+            <img src={carousel_1} alt="carousel" />
+            {/* <img src={carousel_1} alt="carousel" /> */}
+          </figure>
+          
+          <nav>
+            <button className="nav prev"/>
+            <button className="nav next"/>
+          </nav>
+          </div>
 
-      {/* <Carousel/> */}
-      
-      <div className="container"  id="#suport">
-          <div className="UX" data-aos="fade-right"> UX/UI Design</div>
-          <p>
-            UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
-          </p>
-          <button className="btn"> Veja Mais</button>
-          <button className="btn-or"> Orçamento</button>
-        </div>
-        </div>
+        {/* <Carousel/> */}
+        
+        <div className="container"  id="#suport">
+            <h1 className="UX" data-aos="fade-right"> UX/UI Design</h1>
+            <p>
+              UX Design é Muito Importante Para Garantir o Sucesso Da Sua Empresa!
+            </p>
+            <button className="btn"> Veja Mais</button>
+            <button className="btn-or"> Orçamento</button>
+          
+          </div>
       </section>
       <section id="pageC">
       <div className="grid_Second">

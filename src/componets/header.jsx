@@ -9,7 +9,7 @@ window.onload = function () {
 
    hamburger.addEventListener("click", mobileMenu);
 
-   function mobileMenu() {
+   async function mobileMenu() {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
    }
@@ -17,7 +17,7 @@ window.onload = function () {
 
    navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-   function closeMenu() {
+   async function closeMenu() {
       hamburger.classList.remove("active");
       navMenu.classList.remove("active");
    }
