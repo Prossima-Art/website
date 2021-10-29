@@ -20,3 +20,7 @@ RUN npm install --silent && \
 RUN npm install react-scripts@3.3.1 -g --silent
 # Inicializa a aplicação
 CMD ["npm", "start"]
+
+
+
+#done
