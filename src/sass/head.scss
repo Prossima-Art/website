@@ -122,6 +122,7 @@
       .hamburger {
           display: block;
           cursor: pointer;
+          
       }
 
   }
@@ -129,6 +130,7 @@
   // Rotare of hamburger
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
+    
   }
 
   .hamburger.active .bar:nth-child(1) {
