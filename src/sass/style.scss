@@ -1024,8 +1024,8 @@ body {
     margin-top:-120px;
     // top:-50px;
     & nav {
-      margin-top: -0px;
-      margin-left: -50px;
+      margin-top: 0px;
+      margin-left: -120px;
       
       
     }
@@ -1055,7 +1055,8 @@ body {
     // }
     
     .container_left {
-      display: none;
+      margin-top:-410px;
+      margin-left:100px;
     }
 
 .container {
@@ -1068,7 +1069,7 @@ body {
   float: right;
   
   p {
-    font: normal normal normal 30px/37px Montserrat;
+    font: normal normal normal 24px/28px Montserrat;
     letter-spacing: 0px;
     width: 330px;
     font-size: 18px;
@@ -1077,11 +1078,11 @@ body {
 
   .UX {
     // max-width: 200px;
-    width: 116px;
-    height: 220px;
+    width: 200px;
+    height: 160px;
     margin-top: 30px;
     text-align: right;
-    font: $UX;
+    font:  normal normal normal 60px/60px Fredericka the Great;
     letter-spacing: 1px;
     color: #ffffff;
     opacity: 1;
@@ -1095,7 +1096,7 @@ body {
     border: transparent;
     cursor: pointer;
     border-radius: 31px;
-    width: 210px;
+    width: 180px;
     height: 55px;
     opacity: 1;
     transition-duration: 0.4s;
@@ -1113,6 +1114,7 @@ body {
     font: normal normal normal 16px/32px Montserrat;
     border: transparent;
     cursor: pointer;
+    
     color: #ffffff;
     letter-spacing: 0px;
     margin-left: 30px;
@@ -1125,10 +1127,10 @@ body {
       
     }
   .container_left .UX {
-    font: normal normal normal 70px/26px Fredericka the Great;
-    line-height: 80px;
-    
-    width: 126px;
+    font:  normal normal normal 60px/60px Fredericka the Great;
+    line-height: 80px;  
+    width: 320px;
+    height: 180px;
   } 
   .megafooter {
     top: 300px;
@@ -1148,11 +1150,37 @@ body {
 
 }
 @media only screen and (max-width: 508px) {
-  .container_left .UX {
-    font: normal normal normal 60px/26px Fredericka the Great;
-    line-height: 80px;
-    width: 126px;
-  } 
+ 
+  .UX {
+    // max-width: 200px;
+    width: 200px;
+    height: 160px;
+    margin-top: 30px;
+    text-align: right;
+    font:  normal normal normal 60px/60px Fredericka the Great;
+    letter-spacing: 1px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .btn {
+    background: #90a6fc 0% 0% no-repeat padding-box;
+    font: normal normal normal 18px/20px Montserrat;
+    // padding: 8px 20px 10px 20px;
+    color: #ffffff;
+    border: transparent;
+    cursor: pointer;
+    border-radius: 31px;
+    width: 180px;
+    height: 55px;
+    opacity: 1;
+    transition-duration: 0.4s;
+
+    &:hover {
+      opacity: 0.2;
+      color: #ffffff;
+    }
+  }
   
   
   #suport {
