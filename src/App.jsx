@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './sass/style.scss';
 // import {i18n} from './translate/i18n'
 import logo from "./img/logo/logo.png"; 
@@ -7,6 +8,7 @@ import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
+import NotFoundPage from './componets/404-error';
 import Nav from './componets/header';
 import AOS from 'aos'; 
 
@@ -111,7 +113,8 @@ function App() {
   
   
   return (
-    
+    <BrowserRouter>
+      <Switch>
     <div className="App">
       
      <section id="pageA">
@@ -233,6 +236,12 @@ function App() {
     </section>
     <Nav />
   </div>
+  
+  
+    <Route path="/404" component={NotFoundPage}/>
+    <Redirect to="/404" />
+  </Switch>
+  </BrowserRouter>
   );
 }
 
