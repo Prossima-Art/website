@@ -36,6 +36,8 @@
 
 // 3D,2D section
 .Carousel_3D{
+  z-index: 1;
+  position:relative;
   top: 200px;
   .carousel-indicators{
     bottom: 50px;
@@ -60,3 +62,5 @@
     overflow: hidden;
   }
 }
+
+// page 404 error
