@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './sass/style.scss';
 // import {i18n} from './translate/i18n'
 import logo from "./img/logo/logo.png"; 
@@ -8,10 +7,10 @@ import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
-import NotFoundPage from './componets/404-error';
+
 import Nav from './componets/header';
 import AOS from 'aos'; 
-import PreLoader2 from './componets/Pre_load';
+
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 

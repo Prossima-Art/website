@@ -56,7 +56,7 @@ function PreLoader() {
           }, 1200);
         });
     }, 2000);
-  }, []);
+  }, [data]);
 
   return (
     <>
