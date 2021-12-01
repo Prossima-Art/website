@@ -1,18 +1,9 @@
 # Imagem de Origem
 #
 #
-#
-#
 # Lane art Design - DOcker file
 #
 # v. 1.0
-#
-#
-#
-#
-#
-# 
-#
 #
 
 FROM node:13-alpine
@@ -29,3 +20,7 @@ RUN npm install --silent && \
 RUN npm install react-scripts@3.3.1 -g --silent
 # Inicializa a aplicação
 CMD ["npm", "start"]
+
+
+
+#done

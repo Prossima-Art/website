@@ -11,7 +11,7 @@ import Grid from './componets/Grid_section';
 import NotFoundPage from './componets/404-error';
 import Nav from './componets/header';
 import AOS from 'aos'; 
-
+import PreLoader2 from './componets/Pre_load';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
@@ -113,12 +113,11 @@ function App() {
   
   
   return (
-    <BrowserRouter>
-      <Switch>
+
     <div className="App">
       
      <section id="pageA">
-     
+  
      <Lottie options={Logo_animation}
                 height={520}
                 width={530}
@@ -235,13 +234,7 @@ function App() {
       </div>
     </section>
     <Nav />
-  </div>
-  
-  
-    <Route path="/404" component={NotFoundPage}/>
-    <Redirect to="/404" />
-  </Switch>
-  </BrowserRouter>
+  </div>    
   );
 }
 

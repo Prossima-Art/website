@@ -17,8 +17,6 @@ body {
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-  /* Center and scale the image nicely */
-  
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -770,6 +768,7 @@ $viewer-distance: 5000px;
 
 // Equipe
 .grid_group {
+  text-align: center;
   z-index: -1;
   display: grid;
   float: right;
@@ -1191,3 +1190,14 @@ body {
   }
 }
 
+.about{
+  position:relative;
+  font: normal 30px;
+  line-height: 36.57px;
+  min-width: 600px;
+  text-align: center;
+  min-width: 300px;
+  top:0px;
+   left: 100px;
+  // margin-right: auto;
+}

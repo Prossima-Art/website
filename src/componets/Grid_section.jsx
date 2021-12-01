@@ -145,10 +145,15 @@ const animaton_pig = {
                         </div>
                         <div className="tab-content" data-tab={3}>
                         <div className="grid_group">
-                            <div className="div1 socials" > <a href="https://www.linkedin.com/in/alannelucena?originalSubdomain=br"> <img src={Linkedin} alt="Linkedin" /> </a> </div> 
+                          {/* <p className="about">
+                        Entre em contato com a gente, vamos adorar te ajudar com seus
+projetos. Para começarmos é bem fácil, a primeira coisa a fazer é
+me contar um pouco sobre sua ideia e necessidade.
+</p> */}
+                             <div className="div1 socials" > <a href="https://www.linkedin.com/in/alannelucena?originalSubdomain=br"> <img src={Linkedin} alt="Linkedin" /> </a> </div> 
                             <div className="div2 socials" > <img src={Mail} alt="Mail" /></div> 
                             <div className="div3 socials" > <a href="https://www.instagram.com/laneartdesign/?hl=en"> <img src={Instagram} alt="Instagram" /></a></div> 
-                            <div className="div4 socials"><a href="https://github.com/Lane-Art-Design"> <img src={Github} alt="Github" /></a></div> 
+                            <div className="div4 socials"><a href="https://github.com/Lane-Art-Design"> <img src={Github} alt="Github" /></a></div>  
                         </div>  
                         </div>
                     </div>
