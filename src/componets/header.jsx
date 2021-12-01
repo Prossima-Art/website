@@ -6,9 +6,9 @@ import React from 'react';
 window.onload = function () {
    const hamburger = document.querySelector(".hamburger");
    const navMenu = document.querySelector(".nav-menu");
-
+    if(hamburger){
    hamburger.addEventListener("click", mobileMenu);
-
+}
    async function mobileMenu() {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
@@ -33,7 +33,7 @@ window.onload = function () {
                         {/* <img id="myImage" src={logo}/> */}
                         <ul className="nav-menu">
                             <li className="nav-item">
-                                <a href="#carousel" className="nav-link">INICIO</a>
+                                <a href="#carousel">INICIO</a>
                             </li>
                             <li className="nav-item">
                             <a href="#carousel">
