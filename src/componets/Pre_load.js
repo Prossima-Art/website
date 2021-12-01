@@ -5,18 +5,23 @@ import App from "../App";
 import styled from 'styled-components';
 
 const Div = styled.div`
-background:#222222;
-background: linear-gradient( to right, rgb(143, 142, 141) 0%, rgb(237, 235, 233) 50%, rgb(143, 142, 141) 100%) 0 0 /  200% 100%   rgb(243, 242, 241);
-animation: linearAnim 2.25s infinite linear;
-width:100vw;
-height:100vh;
+    background: linear-gradient(300deg,#4b87b5,#b03754);
+    background-size: 120% 120%;
+    animation: gradient-animation 1.5s ease infinite;
+    width:100vw;
+    height:100vh;
 
-@keyframes linearAnim {
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
     100% {
-      background-position: -100% 0;
+      background-position: 0% 50%;
     }
   }
-
 `;
 
 const defaultOptions1 = {
@@ -65,7 +70,6 @@ function PreLoader() {
         <Div>
           {!loading ? (
             <Lottie options={defaultOptions1}
-            
             height={200} width={300} />
           ) : (
             <Lottie options={defaultOptions2} height={200} width={300} />
