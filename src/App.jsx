@@ -1,4 +1,5 @@
 import React from 'react';
+import AOS from 'aos'; 
 import './sass/style.scss';
 // import {i18n} from './translate/i18n'
 import logo from "./img/logo/logo.png"; 
@@ -7,9 +8,7 @@ import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
-
 import Nav from './componets/header';
-import AOS from 'aos'; 
 
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
