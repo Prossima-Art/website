@@ -1,4 +1,8 @@
-import React from 'react'
+import React from "react";
+// import { collection } from 'firebase/firestore/lite';
+// import  "firebase/firestore";
+// import db from '../server/index';
+// import  collection  from "firebase/firestore";
 import '../sass/style.scss';
 import '../sass/style_mobile.scss';
 
@@ -20,6 +24,7 @@ import Linkedin from '../img/linkedin.svg'
 import Mail from '../img/mail.svg'
 import Github from '../img/github.svg'
 import Instagram from '../img/instagram.svg'
+
 
 const animaton_pig = {
     loop: true,
@@ -57,9 +62,35 @@ const animaton_pig = {
 
  
   
-    class Grid extends React.Component {
+    const Grid =()=> {
         
-          render(){
+          
+              // const [name,setName] = useState("");
+              // const [email,setEmail] = useState("");
+              // const [message,setMessage] = useState("");
+              // const handleSubmit = (e) => {
+              //   e.preventDefault();
+
+              //   FirebaseFirestore.collection(db,'contacts').add({
+              //     name:name,
+              //     email:email,
+              //     message:message
+              //   })
+              //   .then(() =>{
+              //     alert('Message has been submitted 😁')
+              //   })
+              //   .catch(error => {
+              //     alert(error,'try again later 😴')
+              //   });
+              //   setName("");
+              //   setEmail("");
+              //   setMessage("");
+              // }
+              
+
+
+
+
               return(
                 <>
                     <div className="container_grid">
@@ -126,17 +157,28 @@ const animaton_pig = {
                         </div>
                         </div>
                         <div className="tab-content" data-tab={2}>
-                        <form name="contact" method="POST" data-netlify="true">
+                        <form name="contact" method="POST" data-netlify="true" 
+                        // onSubmit={handleSubmit}
+                        >
                           <div>
-                          <label><textarea required name="message" placeholder="Digite sua messagem"></textarea></label> 
+                          <label><textarea required name="message" placeholder="Digite sua messagem" 
+                          // value={message}
+                          // onChange={(e)=> setMessage(e.target.value)}
+                          ></textarea></label> 
                           </div>
                           
                           <div>
-                            <label><input  required type="text" name="name" placeholder="Seu nome" /></label>   
+                            <label><input  required type="text" name="name" placeholder="Seu nome" 
+                            // value={name}
+                            // onChange={(e)=> setName(e.target.value)}
+                            /></label>   
                             </div>
                           
                           <div>
-                            <label><input required type="email"  name="email" placeholder="Seu E-mail"/></label>
+                            <label><input required type="email"  name="email" placeholder="Seu E-mail" 
+                            // value={email}
+                            // onChange={(e)=> setEmail(e.target.value)}
+                            /></label>
                             </div>
                           
                             <button type="submit" className="btn">Enviar</button>
@@ -164,5 +206,4 @@ me contar um pouco sobre sua ideia e necessidade.
                 </>
               )
           }
-    }
     export default Grid

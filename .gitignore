@@ -1,3 +1,11 @@
 
 .vscode 
+
 img
+/src/server/
+# /src/server/firebase.js
+
+.firebaserc
+ firebase.json
+ firebase.rules
+ firestore.indexes.json
