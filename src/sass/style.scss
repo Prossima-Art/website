@@ -8,30 +8,25 @@
 @import "./style_mobile.scss";
 @import "./head.scss";
 @import "./linkswap.sass";
-@-webkit-keyframes fadeOut {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-  }
-}
+
 @keyframes fadeOut {
   0% {
       opacity: 1;
+      z-index: 999;
   }
   50% {
       opacity: 1;
+      z-index: 999;
   }
   100% {
       opacity: 0;
+      z-index: 0;
+      
+      
   }
 }
 #websiteOverlay{
-  z-index: 9999;
+
 text-align:center;
 align-items: center;
 position: fixed;
@@ -43,6 +38,8 @@ height:100vh;
 opacity: 0;
 -webkit-animation: fadeOut 3s;
 animation: fadeOut 3s;
+
+
 & p{
   font-size: 30px;
 }

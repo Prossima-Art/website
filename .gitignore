@@ -3,8 +3,8 @@
 
 img
 /src/server/
-# /src/server/firebase.js
-
+ /src/server/firebase.js
+ /src/server/index.js
 .firebaserc
  firebase.json
  firebase.rules
