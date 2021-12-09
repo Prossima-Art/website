@@ -2,7 +2,7 @@
 .vscode 
 
 img
-/src/server
+/src/server/index.js
 
 .firebaserc
  firebase.json
