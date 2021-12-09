@@ -1,107 +1,23 @@
 import React from 'react';
-import AOS from 'aos'; 
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './sass/style.scss';
 // import {i18n} from './translate/i18n'
+import './componets/Settings';
 import logo from "./img/logo/logo.png"; 
 import Lottie from 'react-lottie'; // for our animations
 import Logo from './componets/logo.json';
 import carousel_1 from './img/slider_0.svg';
 import Cube from './img/cube.png'
 import Grid from './componets/Grid_section';
+import NotFoundPage from './componets/404-error';
 import Nav from './componets/header';
+import AOS from 'aos'; 
 
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
 function App() {
-  window.addEventListener("load", () => {
-    var carousels = document.querySelectorAll(".carousel");
-    for (var i = 0; i < carousels.length; i++) {
-      carousel(carousels[i]);
-    }
-  });
-  
-  async function carousel(root) {
-    var figure = root.querySelector("figure"),
-      nav = root.querySelector("nav"),
-      images = figure.children,
-      n = images.length,
-      gap = root.dataset.gap || 0,
-      bfc = "bfc" in root.dataset,
-      theta = (2 * Math.PI) / n,
-      currImage = 0;
-    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-    window.addEventListener("resize", () => {
-      setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-    });
-  
-    setupNavigation();
-  
-    async function setupCarousel(n, s) {
-      var apothem = s / (2 * Math.tan(Math.PI / n));
-      figure.style.transformOrigin = `50% 50% ${-apothem}px`;
-  
-      for (var i = 0; i < n; i++) images[i].style.padding = `${gap}px`;
-      for (i = 1; i < n; i++) {
-        images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
-        images[i].style.transform = `rotateY(${i * theta}rad)`;
-      }
-      if (bfc)
-        for (i = 0; i < n; i++) images[i].style.backfaceVisibility = "hidden";
-  
-      rotateCarousel(currImage);
-    }
-  
-    async function setupNavigation() {
-      nav.addEventListener("click", onClick, true);
-  
-      function onClick(e) {
-        e.stopPropagation();
-  
-        var t = e.target;
-        if (t.tagName.toUpperCase() !== "BUTTON") return;
-  
-        if (t.classList.contains("next")) {
-          currImage++;
-        } else {
-          currImage--;
-        }
-  
-        rotateCarousel(currImage);
-      }
-    }
-  
-    async function rotateCarousel(imageIndex) {
-      figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
-    }
-  }
-  // right_content grid
-
-  async function setupTabs (){
-    document.querySelectorAll('.tab-btn').forEach(button=>{
-      button.addEventListener('click',()=>{
-        
-        
-        const sidebar = button.parentElement;
-        const tabs = sidebar.parentElement;
-        const tabNumber = button.dataset.forTab;
-        const tabActivate = tabs.querySelector(`.tab-content[data-tab="${tabNumber}"]`)
-        
-        sidebar.querySelectorAll('.tab-btn').forEach(button=>{
-          button.classList.remove('tab-btn-active')
-        })
-         tabs.querySelectorAll('.tab-content').forEach(tab=>{
-          tab.classList.remove('tab-content-active')
-        })
-        button.classList.add('tab-btn-active')
-        tabActivate.classList.add('tab-content-active')
-      })
-    })
-  }
-  
-  document.addEventListener('DOMContentLoaded',()=>{
-    setupTabs();
-  })
+ 
 
   const Logo_animation = {
     loop: false,
@@ -111,11 +27,19 @@ function App() {
   
   
   return (
-
+    <BrowserRouter>
+      <Switch>
     <div className="App">
-      
+    <div id="websiteOverlay">
+    <Lottie options={Logo_animation}
+                height={520}
+                width={530}
+                style={{ left:"0", right:"0" }}
+                />
+     <p>wellcome to Lane art Design...</p>
+</div>
      <section id="pageA">
-  
+     
      <Lottie options={Logo_animation}
                 height={520}
                 width={530}
@@ -145,7 +69,7 @@ function App() {
           <div className="waterfall_drops _10"/>
         </div>
         
-        <div className="carousel " id="carousel">
+        <div className="carousel" id="carousel">
           <figure>
             <img src={carousel_1} alt="carousel" />
             <img src={carousel_1} alt="carousel" />
@@ -232,7 +156,13 @@ function App() {
       </div>
     </section>
     <Nav />
-  </div>    
+  </div>
+  
+  
+    <Route path="/404" component={NotFoundPage}/>
+    <Redirect to="/404" />
+  </Switch>
+  </BrowserRouter>
   );
 }
 
