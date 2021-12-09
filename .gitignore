@@ -1,9 +1,10 @@
 
 .vscode 
-img
-./src/server
 
-.firevaserc
-firebase.json
-firebase.rules
-firestore.indexes.json
+img
+/src/server
+
+.firebaserc
+ firebase.json
+ firebase.rules
+ firestore.indexes.json
