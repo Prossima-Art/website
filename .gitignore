@@ -3,6 +3,7 @@
 
 img
 /src/server/index.js
+/src/server/firebase.js
 
 .firebaserc
  firebase.json
