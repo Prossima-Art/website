@@ -39,9 +39,9 @@ opacity: 0;
 -webkit-animation: fadeOut 3s;
 animation: fadeOut 3s;
 
-
 & p{
   font-size: 30px;
+  line-height: 40px;
 }
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.7rem;
+  width: 0.5rem;
 }
 
 /* Track */
@@ -67,11 +67,19 @@ body {
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 20px #87b0f8;
   border-radius: 10px;
+   
+  
 }
+// ::-webkit-scrollbar-button{
+// background-color: #6a82ad;
+// }
 
 ::-webkit-scrollbar-thumb {
   background: $primary_color;
   border-radius: 0.7rem;
+  box-sizing: border-box;
+  
+
 
   &:hover {
     background: #6a82ad;

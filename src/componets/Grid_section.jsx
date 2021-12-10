@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 // import { collection } from 'firebase/firestore/lite';
-// import  "firebase/firestore";
-// import db from '../server/index';
+// // import  "firebase/firestore";
+//  import db from '../server/index';
 // import  collection  from "firebase/firestore";
 import '../sass/style.scss';
 import '../sass/style_mobile.scss';
+import swal from 'sweetalert2'
 
 // right_grid
 import Lottie from 'react-lottie';
@@ -64,33 +65,50 @@ const animaton_pig = {
   
     const Grid =()=> {
         
-          
-              // const [name,setName] = useState("");
-              // const [email,setEmail] = useState("");
-              // const [message,setMessage] = useState("");
-              // const handleSubmit = (e) => {
-              //   e.preventDefault();
+          const [userData, setUserData] = useState({
+            name:"",
+            email:"",
+            message:"",
 
-              //   FirebaseFirestore.collection(db,'contacts').add({
-              //     name:name,
-              //     email:email,
-              //     message:message
-              //   })
-              //   .then(() =>{
-              //     alert('Message has been submitted 😁')
-              //   })
-              //   .catch(error => {
-              //     alert(error,'try again later 😴')
-              //   });
-              //   setName("");
-              //   setEmail("");
-              //   setMessage("");
-              // }
+          });
+          let name, value;
+          const postUserData = (event) => {
+            name = event.target.name;
+            value = event.target.value;
+            setUserData({...userData, [name]:value});
+          };
+
+
+          // connect with firebase 
+          const submitData = async (event) =>{
+            event.preventDefault();
+            const{name, email,message} = userData;
+            const res = await fetch
+            ("https://laneartdesign-3b5c0-default-rtdb.firebaseio.com/userDataRecords.json",
+            {
+              method:"POST",
+              headers: {
+                "Content-Type":"application/json",
+              },
+              body:JSON.stringify({
+                name,
+                email,
+                message
+              })
+            }
+          );
+          if(res){
+            new swal(
+            
+                'Formulário submetido!',
+                'Em breve retornaremos 🥰',
+                'success'     
+            )
+          }else{
+            alert("Algo de errado aconteceu, por favor tente novamente mais tarde. 😴");
+          }
+        };
               
-
-
-
-
               return(
                 <>
                     <div className="container_grid">
@@ -158,30 +176,32 @@ const animaton_pig = {
                         </div>
                         <div className="tab-content" data-tab={2}>
                         <form name="contact" method="POST" data-netlify="true" 
-                        // onSubmit={handleSubmit}
+                        
                         >
                           <div>
                           <label><textarea required name="message" placeholder="Digite sua messagem" 
-                          // value={message}
-                          // onChange={(e)=> setMessage(e.target.value)}
+                           value={userData.message}
+                           onChange={postUserData}
                           ></textarea></label> 
                           </div>
                           
                           <div>
                             <label><input  required type="text" name="name" placeholder="Seu nome" 
-                            // value={name}
-                            // onChange={(e)=> setName(e.target.value)}
+                             value={userData.name}
+                             onChange={postUserData}
                             /></label>   
                             </div>
                           
                           <div>
                             <label><input required type="email"  name="email" placeholder="Seu E-mail" 
-                            // value={email}
-                            // onChange={(e)=> setEmail(e.target.value)}
+                            value={userData.email}
+                            onChange={postUserData}
                             /></label>
                             </div>
                           
-                            <button type="submit" className="btn">Enviar</button>
+                            <button type="submit" className="btn"
+                            onClick={submitData}
+                            >Enviar</button>
                           
                         </form>
                         </div>
