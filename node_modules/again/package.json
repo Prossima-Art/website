@@ -1,0 +1,26 @@
+{
+  "name": "again",
+  "version": "0.0.1",
+  "description": "call function again and again",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jifeng/again"
+  },
+  "keywords": [
+    "again"
+  ],
+  "author": "jifeng <wade428@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*",
+    "visionmedia-jscoverage": "*"
+  }
+}

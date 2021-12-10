@@ -1,7 +1,6 @@
 
 .vscode 
-/node_modules
-package-lock.json
+
 img
 # /src/server/
  /src/server/firebase.js
