@@ -31,13 +31,13 @@ function App() {
       <Switch>
     <div className="App">
     <div id="websiteOverlay">
-    <Lottie options={Logo_animation}
+      <Lottie options={Logo_animation}
                 height={520}
                 width={530}
                 style={{ left:"0", right:"0" }}
                 />
      <p>wellcome to Lane art Design...</p>
-</div>
+    </div>
      <section id="pageA">
      
      <Lottie options={Logo_animation}
